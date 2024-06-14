@@ -1,0 +1,140 @@
+      <html>
+      <head
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+        <title>Account Settings | Poggit</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description"
+            content="Account Settings">
+      <meta name="keywords"
+            content="Account Settings,plugin,PocketMine,pocketmine plugins,MCPE plugins,Poggit,PocketMine-MP,PMMP"/>
+      <meta property="og:site_name" content="Poggit"/>
+      <meta property="og:image" content="res/poggit-icon.png"/>
+      <meta property="og:title" content="Account Settings"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="http://localhost/"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta name="twitter:site" content="poggitci"/>
+      <meta name="twitter:title" content="Account Settings"/>
+      <meta name="twitter:description" content=""/>
+      <meta name="theme-color" content="#292b2c">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <link type="image/x-icon" rel="icon" href="/res/poggit-icon.ico">
+        <script>var sessionData = {"path":{"relativeRoot":"/"},"app":{"clientId":"ID"},"session":{"antiForge":"ID","isLoggedIn":true,"loginName":"JaxkDev","adminLevel":5},"opts":{"allowSu":true,"usePages":false,"showIcons":true,"darkMode":true},"meta":{"isDebug":false}};
+var PoggitConsts = {"AdminLevel":{"GUEST":0,"MEMBER":1,"CONTRIBUTOR":2,"MODERATOR":3,"REVIEWER":4,"ADM":5},"Staff":{"adeynes":4,"brandon15811":5,"cortexpe":4,"dktapps":5,"ethaniccc":4,"fuyutsuki":4,"ifera":4,"jacknoordhuis":4,"jasonw4331":5,"javierleon9966":4,"jaxkdev":5,"laith98dev":4,"matcracker":4,"sandertv":4,"sof3":5,"sylvrs":4,"thunder33345":4},"BuildClass":{"1":"Dev","4":"PR"},"LintLevel":{"0":"OK","1":"Lint","2":"Warning","3":"Error","4":"Build Error"},"Config":{"MAX_PHAR_SIZE":2097152,"MAX_ZIPBALL_SIZE":10485760,"MAX_RAW_VIRION_SIZE":5242880,"MAX_REVIEW_LENGTH":512,"MAX_VERSION_LENGTH":20,"MAX_KEYWORD_COUNT":100,"MAX_KEYWORD_LENGTH":20,"MIN_SHORT_DESC_LENGTH":10,"MAX_SHORT_DESC_LENGTH":128,"MIN_DESCRIPTION_LENGTH":100,"MAX_LICENSE_LENGTH":51200,"MIN_CHANGELOG_LENGTH":10,"MAX_WEEKLY_BUILDS":100,"MAX_WEEKLY_PROJECTS":6,"RECENT_BUILDS_RANGE":86400,"MIN_PUBLIC_RELEASE_STATE":3,"MIN_DEV_STATE":3,"VOTED_THRESHOLD":5},"ReleaseState":{"draft":0,"rejected":1,"submitted":2,"checked":3,"voted":4,"approved":5,"featured":6}};
+</script>      <!--suppress JSUnresolvedFunction -->
+<!--        <script>-->
+<!--        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');        ga("create", "UA-93677016-1", "auto");        ga('set', 'dimension1', "Member");-->
+<!--        ga('set', 'dimension2', "Admin");-->
+<!--        ga('set', 'dimension3', "SettingsModule");-->
+<!--        ga('send', 'pageview');-->
+<!--      </script>-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+              <link type="text/css" rel="stylesheet" href="/res/style-dark.css">
+        <style>.toggle-slide{overflow:hidden;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;direction:ltr;text-align:center}div.disabled>.toggle-slide{opacity:.7;pointer-events:none}.toggle-slide .toggle-on,.toggle-slide .toggle-off,.toggle-slide .toggle-blob{float:left}.toggle-slide .toggle-blob{position:relative;z-index:99;cursor:hand;cursor:grab}</style><style>.toggle-light .toggle-slide{border-radius:9999px;box-shadow:0 0 0 1px #999}.toggle-light .toggle-on,.toggle-light .toggle-off{font-size:11px;font-weight:500}.toggle-light .toggle-on,.toggle-light .toggle-select .toggle-inner .active{background:#45a31f;box-shadow:inset 2px 2px 6px rgba(0,0,0,0.2);text-shadow:1px 1px rgba(0,0,0,0.2);color:rgba(255,255,255,0.8)}.toggle-light .toggle-off,.toggle-light .toggle-select .toggle-on{color:rgba(0,0,0,0.6);text-shadow:0 1px rgba(255,255,255,0.2);background:-webkit-linear-gradient(#cfcfcf,#f5f5f5);background:linear-gradient(#cfcfcf,#f5f5f5)}.toggle-light .toggle-blob{border-radius:50px;background:-webkit-linear-gradient(#f5f5f5,#cfcfcf);background:linear-gradient(#f5f5f5,#cfcfcf);box-shadow:1px 1px 2px #888}.toggle-light .toggle-blob:hover{background:-webkit-linear-gradient(#e4e4e4,#f9f9f9);background:linear-gradient(#e4e4e4,#f9f9f9)}</style><style>.paginate-pagination ul{margin:5px;list-style:none}.paginate-pagination ul:after{content:' ';display:table;clear:both}.paginate-pagination ul>li{float:left;margin-right:3px}.paginate-pagination ul>li>a.page{display:block;height:30px;width:30px;text-align:center;line-height:30px;border:1px solid #ddd;background:white;text-decoration:none;cursor:pointer}.paginate-pagination ul>li>a.page:hover{color:#fff;background-color:#0275d8}.paginate-pagination ul>li>a.page.active{color:#fff;background-color:#0275d8;cursor:default}.paginate-pagination ul>li>a.page-next.deactive,.paginate-pagination ul>li>a.page-prev.deactive{opacity:.7;cursor:default}</style>      </head>
+      <body>
+            <div id="header" class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" role="navigation">
+          <div class="tabletlogo">
+            <div class="navbar-brand tm">
+              <a href="/">
+                <img class="logo" src="/res/poggit-icon.png"/>
+                Poggit
+                                </a></div>
+            <button class="navbar-toggler navbar-toggler-right mr-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          </div>
+          <div id="navbarNavAltMarkup" class="navbar-right navbuttons collapse navbar-collapse">
+            <div class="navbar-middle">
+              <ul class="navbar-nav navbuttons collapse navbar-collapse">
+                <li class="nav-item navbutton" data-target="">Home</li>
+                <li class="nav-item navbutton" data-target="plugins">Releases</li>
+                <li class="nav-item navbutton" data-target="ci/recent">Dev</li>
+                                      <li class="nav-item navbutton" data-target="review">Review</li>
+                                  <li class="nav-item navbutton" data-target="faq">FAQ</li>
+                <!--                        <li class="nav-item navbutton extlink" data-target="https://poggit.github.io/support">Help</li>-->
+                <!-- TODO Finish the Help page, then add this back -->
+              </ul>
+            </div>
+            <ul class="navbar-nav">
+                                                        <li class="login-buttons">
+                      <span
+                          onclick='ajax("login.su", {data: {target: prompt("su")}, success: function() { window.location.reload(true); }})'><code>su</code></span>
+                    </li>
+                                      <li class="nav-item login-buttons">
+                    <span onclick='location = "\/settings";'>Settings</span>
+                  </li>
+                  <li class="nav-item login-buttons"><span onclick="logout()">Logout</span></li>
+                  <div><a target="_blank"
+                          href="https://github.com/JaxkDev?tab=repositories">
+                      <img width="20" height="20"
+                           src="https://github.com/JaxkDev.png" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/></a></div>
+                            </ul>
+          </div>
+        </nav>
+      </div>
+                      <div id="body">
+        <h1>Account Settings</h1>
+                      <div class="cbinput">
+              <input class="settings-cb"
+                     type="checkbox" checked                     data-name="makeTabs"/>
+                Show description in tabs &nbsp; <sup class='hover-title html-tooltip' title="Poggit will try to split the plugin description into multiple tabs.">(?)</sup>            </div>
+                          <div class="cbinput">
+              <input class="settings-cb"
+                     type="checkbox"                      data-name="usePages"/>
+                Enable pagination &nbsp; <sup class='hover-title html-tooltip' title="If you disable this option, all releases will be shown on a single page in the plugin list.">(?)</sup>            </div>
+                          <div class="cbinput">
+              <input class="settings-cb"
+                     type="checkbox" checked                     data-name="showIcons"/>
+                Show plugin icons &nbsp; <sup class='hover-title html-tooltip' title="If you disable this option, all plugin icons will be displayed as the default plugin icon to save data: &lt;img src=&#039;/res/defaultPluginIcon2.png&#039;/&gt;">(?)</sup>            </div>
+                          <div class="cbinput">
+              <input class="settings-cb"
+                     type="checkbox" checked                     data-name="autoLogin"/>
+                Automatically re-login if session expired &nbsp; <sup class='hover-title html-tooltip' title="Your login expires after 24 hours of inactivity. Enabling this will automatically log you in again when you return to Poggit, without requiring you to click the &quot;Login with GitHub&quot; button again.">(?)</sup>            </div>
+                          <div class="cbinput">
+              <input class="settings-cb"
+                     type="checkbox" checked                     data-name="allowSu"/>
+                Allow admin su &nbsp; <sup class='hover-title html-tooltip' title="Allow Poggit admins to login on Poggit as you. Poggit admins may ask you to enable this if you are encountering bugs on Poggit.">(?)</sup>            </div>
+                          <div class="cbinput">
+              <input class="settings-cb"
+                     type="checkbox" checked                     data-name="darkMode"/>
+                Enable dark mode &nbsp; <sup class='hover-title html-tooltip' title="Changes the theme of poggit to dark mode, saving your eyes from the pain of light mode.">(?)</sup>            </div>
+                      <hr/>
+        <h3>GitHub Integration</h3>
+        <p><span class="action" onclick="login(undefined, true)">Authorize more permissions to Poggit</span></p>
+      </div>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div id="footer">
+        <ul class="footer-navbar">
+          <li>Powered by Poggit 1.0-beta                        </li>
+          <li id="online-user-count"></li>
+          <li>&copy; 2024 Poggit</li>
+          <span id="flat-cp">Some icons by www.freepik.com and <a href="https://icons8.com">Icon pack by Icons8</a></span>
+        </ul>
+        <ul class="footer-navbar">
+          <li><a href="/tos">Terms of Service</a></li>
+          <li><a target="_blank" href="https://discord.gg/XDugAkJ">Contact @ Discord</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit">Source Code</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit/issues">Bugs / Suggestions</a></li>
+          <li><a href="https://twitter.com/poggitci" class="twitter-follow-button" data-show-screen-name="false"
+                 data-show-count="true">Follow @poggitci</a></li>
+          <li><a href="#" onclick="$('html, body').animate({scrollTop: 0},500);">Back to Top</a></li>
+        </ul>
+      </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/toggles.js"></script>
+        <script type="text/javascript" src="js/jquery.form.js"></script>
+        <script type="text/javascript" src="js/mobile.js"></script>
+        <script type="text/javascript" src="js/std.js"></script>
+        <script type="text/javascript" src="js/jquery.paginate.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+      </body>
+</html>
+        
