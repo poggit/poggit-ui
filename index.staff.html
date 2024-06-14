@@ -1,0 +1,928 @@
+      <!DOCTYPE html>
+      <html lang="en">
+      <head
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description"
+            content="Poggit: The PocketMine Plugin Platform">
+      <meta name="keywords"
+            content="Poggit,plugin,PocketMine,pocketmine plugins,MCPE plugins,Poggit,PocketMine-MP,PMMP"/>
+      <meta property="og:site_name" content="Poggit"/>
+      <meta property="og:image" content="res/poggit-icon.png"/>
+      <meta property="og:title" content="Poggit"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="http://127.0.0.1/"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta name="twitter:site" content="poggitci"/>
+      <meta name="twitter:title" content="Poggit"/>
+      <meta name="twitter:description" content="Poggit"/>
+      <meta name="theme-color" content="#292b2c">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <link type="image/x-icon" rel="icon" href="/res/poggit-icon.ico">
+        <script>var sessionData = {"path":{"relativeRoot":"/"},"app":{"clientId":"ID"},"session":{"antiForge":"ID","isLoggedIn":true,"loginName":"JaxkDev","adminLevel":5},"opts":{"allowSu":true,"usePages":false,"showIcons":true,"darkMode":true},"meta":{"isDebug":false}};
+var PoggitConsts = {"AdminLevel":{"GUEST":0,"MEMBER":1,"CONTRIBUTOR":2,"MODERATOR":3,"REVIEWER":4,"ADM":5},"Staff":{"adeynes":4,"brandon15811":5,"cortexpe":4,"dktapps":5,"ethaniccc":4,"fuyutsuki":4,"ifera":4,"jacknoordhuis":4,"jasonw4331":5,"javierleon9966":4,"jaxkdev":5,"laith98dev":4,"matcracker":4,"sandertv":4,"sof3":5,"sylvrs":4,"thunder33345":4},"BuildClass":{"1":"Dev","4":"PR"},"LintLevel":{"0":"OK","1":"Lint","2":"Warning","3":"Error","4":"Build Error"},"Config":{"MAX_PHAR_SIZE":2097152,"MAX_ZIPBALL_SIZE":10485760,"MAX_RAW_VIRION_SIZE":5242880,"MAX_REVIEW_LENGTH":512,"MAX_VERSION_LENGTH":20,"MAX_KEYWORD_COUNT":100,"MAX_KEYWORD_LENGTH":20,"MIN_SHORT_DESC_LENGTH":10,"MAX_SHORT_DESC_LENGTH":128,"MIN_DESCRIPTION_LENGTH":100,"MAX_LICENSE_LENGTH":51200,"MIN_CHANGELOG_LENGTH":10,"MAX_WEEKLY_BUILDS":100,"MAX_WEEKLY_PROJECTS":6,"RECENT_BUILDS_RANGE":86400,"MIN_PUBLIC_RELEASE_STATE":3,"MIN_DEV_STATE":3,"VOTED_THRESHOLD":5},"ReleaseState":{"draft":0,"rejected":1,"submitted":2,"checked":3,"voted":4,"approved":5,"featured":6}};
+</script>      <!--suppress JSUnresolvedFunction -->
+       <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');        ga("create", "UA-93677016-1", "auto");        ga('set', 'dimension1', "Member");
+        ga('set', 'dimension2', "Admin");
+        ga('set', 'dimension3', "MemberHomePage");
+        ga('send', 'pageview');
+      </script> commented by jaxkdev -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+              <link type="text/css" rel="stylesheet" href="/res/style-dark.css">
+        <style>.toggle-slide{overflow:hidden;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;direction:ltr;text-align:center}div.disabled>.toggle-slide{opacity:.7;pointer-events:none}.toggle-slide .toggle-on,.toggle-slide .toggle-off,.toggle-slide .toggle-blob{float:left}.toggle-slide .toggle-blob{position:relative;z-index:99;cursor:hand;cursor:grab}</style><style>.toggle-light .toggle-slide{border-radius:9999px;box-shadow:0 0 0 1px #999}.toggle-light .toggle-on,.toggle-light .toggle-off{font-size:11px;font-weight:500}.toggle-light .toggle-on,.toggle-light .toggle-select .toggle-inner .active{background:#45a31f;box-shadow:inset 2px 2px 6px rgba(0,0,0,0.2);text-shadow:1px 1px rgba(0,0,0,0.2);color:rgba(255,255,255,0.8)}.toggle-light .toggle-off,.toggle-light .toggle-select .toggle-on{color:rgba(0,0,0,0.6);text-shadow:0 1px rgba(255,255,255,0.2);background:-webkit-linear-gradient(#cfcfcf,#f5f5f5);background:linear-gradient(#cfcfcf,#f5f5f5)}.toggle-light .toggle-blob{border-radius:50px;background:-webkit-linear-gradient(#f5f5f5,#cfcfcf);background:linear-gradient(#f5f5f5,#cfcfcf);box-shadow:1px 1px 2px #888}.toggle-light .toggle-blob:hover{background:-webkit-linear-gradient(#e4e4e4,#f9f9f9);background:linear-gradient(#e4e4e4,#f9f9f9)}</style><style>.paginate-pagination ul{margin:5px;list-style:none}.paginate-pagination ul:after{content:' ';display:table;clear:both}.paginate-pagination ul>li{float:left;margin-right:3px}.paginate-pagination ul>li>a.page{display:block;height:30px;width:30px;text-align:center;line-height:30px;border:1px solid #ddd;background:white;text-decoration:none;cursor:pointer}.paginate-pagination ul>li>a.page:hover{color:#fff;background-color:#0275d8}.paginate-pagination ul>li>a.page.active{color:#fff;background-color:#0275d8;cursor:default}.paginate-pagination ul>li>a.page-next.deactive,.paginate-pagination ul>li>a.page-prev.deactive{opacity:.7;cursor:default}</style><title>Poggit</title>      </head>
+      <body>
+            <div id="header" class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" role="navigation">
+          <div class="tabletlogo">
+            <div class="navbar-brand tm">
+              <a href="/">
+                <img class="logo" src="/res/poggit-icon.png"/>
+                Poggit
+                                </a></div>
+            <button class="navbar-toggler navbar-toggler-right mr-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          </div>
+          <div id="navbarNavAltMarkup" class="navbar-right navbuttons collapse navbar-collapse">
+            <div class="navbar-middle">
+              <ul class="navbar-nav navbuttons collapse navbar-collapse">
+                <li class="nav-item navbutton" data-target="">Home</li>
+                <li class="nav-item navbutton" data-target="plugins">Releases</li>
+                <li class="nav-item navbutton" data-target="ci/recent">Dev</li>
+                                      <li class="nav-item navbutton" data-target="review">Review</li>
+                                  <li class="nav-item navbutton" data-target="faq">FAQ</li>
+                <!--                        <li class="nav-item navbutton extlink" data-target="https://poggit.github.io/support">Help</li>-->
+                <!-- TODO Finish the Help page, then add this back -->
+              </ul>
+            </div>
+            <ul class="navbar-nav">
+                                                        <li class="login-buttons">
+                      <span
+                          onclick='ajax("login.su", {data: {target: prompt("su")}, success: function() { window.location.reload(true); }})'><code>su</code></span>
+                    </li>
+                                      <li class="nav-item login-buttons">
+                    <span onclick='location = "\/settings";'>Settings</span>
+                  </li>
+                  <li class="nav-item login-buttons"><span onclick="logout()">Logout</span></li>
+                  <div><a target="_blank"
+                          href="https://github.com/JaxkDev?tab=repositories">
+                      <img width="20" height="20"
+                           src="https://github.com/JaxkDev.png" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/></a></div>
+                            </ul>
+          </div>
+        </nav>
+      </div>
+                      <div id="body">
+                  <!-- VarPage: poggit\home\MemberHomePage -->
+        <div class="main-wrapper horiz-panes">
+                  <div class="member-panel-plugins">
+        <div class="recent-builds-header"><a href="/ci/recent"><h4>Latest Releases</h4></a>
+        </div>
+        <div class="recent-builds-wrapper">
+            <div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="309958.96356208"
+           data-first-submit="1515856953"
+           data-state-change-date="1718108458"
+           data-submit-date="1534089951"
+           data-state="5"
+           data-downloads="10739"
+           data-total-downloads="11990"
+           data-mean-review="4.6"
+           data-name="CustomAlerts"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/CustomAlerts/2.1">
+              <img
+                  src="https://raw.githubusercontent.com/EvolSoft/CustomAlerts/3f949ceecb4aec3ceb356c89401bd2eb4754aceb/CustomAlerts/icon.png"
+                  title="Customize or hide alerts (join/leave messages, whitelist messages, outdated server/client messages, etc...) plugin"
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">12 Aug 2018</span>
+                              <span class="plugin-smalldate">10739/11990 downloads</span>
+                                            <div class="release-score" title="14 reviews">
+                                                              <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                                        </div>
+                        </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/CustomAlerts/2.1">CustomAlerts</a>
+              <span class='release-flag release-flag-outdated'
+            title='This version only works on beta/old versions of PocketMine-MP (not compatible with 5.16.0).'></span>                        </span>
+          <span class="plugin-version">v2.1</span>
+          <span class="plugin-author">EvolSoft </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="344988.4502031"
+           data-first-submit="1717953630"
+           data-state-change-date="1718009072"
+           data-submit-date="1717953630"
+           data-state="5"
+           data-downloads="34"
+           data-total-downloads="34"
+           data-mean-review="0"
+           data-name="JailX"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/JailX/1.0.0">
+              <img
+                  src="https://raw.githubusercontent.com/t-starks/JailX/329af3dff81ca814b81a584df9c09e7267e84425/icon.png"
+                  title="A plugin to manage a jail on the server."
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">09 Jun 2024</span>
+                              <span class="plugin-smalldate">34/34 downloads</span>
+                                      </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/JailX/1.0.0">JailX</a>
+                                      </span>
+          <span class="plugin-version">v1.0.0</span>
+          <span class="plugin-author">t-starks </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="242839.19486485"
+           data-first-submit="1656644206"
+           data-state-change-date="1718008931"
+           data-submit-date="1717995976"
+           data-state="5"
+           data-downloads="40"
+           data-total-downloads="4043"
+           data-mean-review="4"
+           data-name="RepairUI"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/RepairUI/3.0.1">
+              <img
+                  src="https://raw.githubusercontent.com/fernanACM/RepairUI/7289828f6c38357ead303687d06f37c66967671d/icon-repairui.png"
+                  title="Repair and customize your item names with RepairUI, for PocketMine-MP 5.0 servers"
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">10 Jun 2024</span>
+                              <span class="plugin-smalldate">40/4043 downloads</span>
+                                            <div class="release-score" title="5 reviews">
+                                                              <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                                              <img src="/res/Empty_Star.svg"/>
+                                    </div>
+                        </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/RepairUI/3.0.1">RepairUI</a>
+                                      </span>
+          <span class="plugin-version">v3.0.1</span>
+          <span class="plugin-author">fernanACM </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="370846.81720353"
+           data-first-submit="1718008392"
+           data-state-change-date="1718008507"
+           data-submit-date="1718008392"
+           data-state="5"
+           data-downloads="7"
+           data-total-downloads="7"
+           data-mean-review="0"
+           data-name="PMMPKahoot"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/PMMPKahoot/1.0.0">
+              <img
+                  src="https://raw.githubusercontent.com/r3pt1s/PMMPKahoot/83f92b19bb3851c0443ef7ff2f91184109bad022/icon.png"
+                  title="Kahoot-based / Quiz-based minigame for PocketMine-MP"
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">10 Jun 2024</span>
+                              <span class="plugin-smalldate">7/7 downloads</span>
+                                      </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/PMMPKahoot/1.0.0">PMMPKahoot</a>
+                                      </span>
+          <span class="plugin-version">v1.0.0</span>
+          <span class="plugin-author">r3pt1s </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="19891.556256603"
+           data-first-submit="1709667396"
+           data-state-change-date="1717950811"
+           data-submit-date="1709667396"
+           data-state="5"
+           data-downloads="73"
+           data-total-downloads="73"
+           data-mean-review="0"
+           data-name="BedwarsPM"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/BedwarsPM/1.0.9">
+              <img
+                  src="https://raw.githubusercontent.com/Sergittos/BedWars/84e5abe7e4d25397d792d1bead990e4e81ca709b/icon.png"
+                  title="🛏️ A BedWars plugin for PocketMine-MP servers"
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">05 Mar 2024</span>
+                              <span class="plugin-smalldate">73/73 downloads</span>
+                                      </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/BedwarsPM/1.0.9">BedwarsPM</a>
+                                      </span>
+          <span class="plugin-version">v1.0.9</span>
+          <span class="plugin-author">Sergittos </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="249903.5807771"
+           data-first-submit="1717707538"
+           data-state-change-date="1717950323"
+           data-submit-date="1717707538"
+           data-state="5"
+           data-downloads="93"
+           data-total-downloads="93"
+           data-mean-review="0"
+           data-name="ClearLag-Mc"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/ClearLag-Mc/1.0.0">
+              <img
+                  src="https://raw.githubusercontent.com/t-starks/ClearLag/899e58608938b166ae66c8bf3c2af8515e2bd76b/icon.png"
+                  title="A plugin to clean items dumped on the server."
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">06 Jun 2024</span>
+                              <span class="plugin-smalldate">93/93 downloads</span>
+                                      </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/ClearLag-Mc/1.0.0">ClearLag-Mc</a>
+                                      </span>
+          <span class="plugin-version">v1.0.0</span>
+          <span class="plugin-author">t-starks </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="311847.42144502"
+           data-first-submit="1717925722"
+           data-state-change-date="1717950303"
+           data-submit-date="1717925722"
+           data-state="5"
+           data-downloads="17"
+           data-total-downloads="17"
+           data-mean-review="0"
+           data-name="World-Worker"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/World-Worker/2.0.2">
+              <img
+                  src="/res/defaultPluginIcon2.png"
+                  title="Manage worlds conveniently and quickly with the World-Worker plugin."
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">09 Jun 2024</span>
+                              <span class="plugin-smalldate">17/17 downloads</span>
+                                      </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/World-Worker/2.0.2">World-Worker</a>
+                                      </span>
+          <span class="plugin-version">v2.0.2</span>
+          <span class="plugin-author">Serenity-sun </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="259657.90473476"
+           data-first-submit="1717826193"
+           data-state-change-date="1717900263"
+           data-submit-date="1717826193"
+           data-state="5"
+           data-downloads="22"
+           data-total-downloads="22"
+           data-mean-review="4"
+           data-name="Frost-Football"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/Frost-Football/1.0.0">
+              <img
+                  src="https://raw.githubusercontent.com/DEVILxD5919/FrostFootball/ff5847c714c0b47a71eb941afb3d05b48f20b63a/icon.png"
+                  title="Add a fun and interactive football game to your PocketMine-MP server with simple spawn and remove commands."
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">08 Jun 2024</span>
+                              <span class="plugin-smalldate">22/22 downloads</span>
+                                            <div class="release-score" title="2 reviews">
+                                                              <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                          <img src="/res/Full_Star_Yellow.svg"/>
+                                                              <img src="/res/Empty_Star.svg"/>
+                                    </div>
+                        </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/Frost-Football/1.0.0">Frost-Football</a>
+                                      </span>
+          <span class="plugin-version">v1.0.0</span>
+          <span class="plugin-author">DEVILxD5919 </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="145222.86743337"
+           data-first-submit="1693816047"
+           data-state-change-date="1717857819"
+           data-submit-date="1717842500"
+           data-state="6"
+           data-downloads="26"
+           data-total-downloads="573"
+           data-mean-review="4.8"
+           data-name="Guardian"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/Guardian/1.5.1">
+              <img
+                  src="/res/defaultPluginIcon2.png"
+                  title="A small AntiCheat Solution against Cheaters"
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">08 Jun 2024</span>
+                              <span class="plugin-smalldate">26/573 downloads</span>
+                                            <div class="release-score" title="12 reviews">
+                                                              <img src="res/Full_Star_Yellow.svg"/>
+                                          <img src="res/Full_Star_Yellow.svg"/>
+                                          <img src="res/Full_Star_Yellow.svg"/>
+                                          <img src="res/Full_Star_Yellow.svg"/>
+                                          <img src="res/Full_Star_Yellow.svg"/>
+                                                        </div>
+                        </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/Guardian/1.5.1">Guardian</a>
+                                      </span>
+          <span class="plugin-version">v1.5.1</span>
+          <span class="plugin-author">VeroxCode </span>
+        </div>
+                  <span class="plugin-state-6">
+          Featured        </span>
+                <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div><div class="plugin-index">      <div class="plugin-entry"
+           data-popularity="230905.59487323"
+           data-first-submit="1717754670"
+           data-state-change-date="1717781473"
+           data-submit-date="1717754670"
+           data-state="5"
+           data-downloads="23"
+           data-total-downloads="23"
+           data-mean-review="0"
+           data-name="AFKZone"
+      >
+        <div class="plugin-entry-block plugin-icon">
+          <div class="plugin-image-wrapper">
+            <a href="/p/AFKZone/2.0.0">
+              <img
+                  src="/res/defaultPluginIcon2.png"
+                  title="AFKZone V2"
+                  onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+            </a>
+          </div>
+          <div class="smalldate-wrapper">
+            <span class="plugin-smalldate">07 Jun 2024</span>
+                              <span class="plugin-smalldate">23/23 downloads</span>
+                                      </div>
+        </div>
+        <div class="plugin-entry-block plugin-main">
+          <span class="plugin-name">
+            <a href="/p/AFKZone/2.0.0">AFKZone</a>
+                                      </span>
+          <span class="plugin-version">v2.0.0</span>
+          <span class="plugin-author">LuthMC </span>
+        </div>
+                  <div id="plugin-categories" value=""></div>
+        <div id="plugin-apis" value='null'></div>
+      </div>
+        </div>        </div>
+      </div>
+      <div class="member-panel-timeline">
+        <h1 class="motto">Developer Dashboard</h1>
+        <div id="home-timeline" class="timeline">
+                      <ul>
+            <li><a href="#home-timeline-1">Activity</a></li>
+            <li><a href="#home-timeline-2">Subscriptions</a></li>
+            <li><a href="#home-timeline-3">Poggit Stats</a></li>
+          </ul>
+          <div id="home-timeline-1">
+            <div class="account-tab">
+                                      <div class="timeline-event">
+                                  <div data-eventid="871466" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-14 17:48:30.440964&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="871458" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-14 16:34:54.10616&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="871445" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-14 15:11:59.961856&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="871377" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-14 09:23:30.051984&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="871264" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-13 22:05:53.918665&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870973" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-12 12:25:55.0059&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870950" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-12 11:16:45.10327&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870936" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-12 09:47:35.850095&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870863" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 21:43:44.911667&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870843" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 17:17:35.718052&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870842" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 17:15:40.478659&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870823" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 16:17:07.690159&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870782" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 13:46:26.684962&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870766" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 12:45:49.968355&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870755" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-11 11:38:19.633987&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870574" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-10 11:19:52.34726&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870051" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-07 23:42:04.110331&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870045" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-07 22:14:58.954417&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="870040" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-07 20:56:36.951618&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="869992" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-07 15:38:41.357686&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="869768" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-06 15:37:46.049369&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="869256" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-06-03 16:18:03.369893&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867723" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-27 11:27:34.201503&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867716" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-27 10:25:18.511007&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867644" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-26 20:29:04.45935&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867614" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-26 17:13:50.245766&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867605" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-26 16:02:35.180202&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867604" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-26 16:02:34.392888&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867574" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-26 12:58:23.642209&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867440" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-25 21:30:06.23282&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867396" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-25 16:33:27.595419&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867243" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-24 21:23:52.461722&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867200" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-24 14:01:14.178833&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="867193" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-24 12:52:41.680856&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="866954" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-22 14:13:34.685277&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="866833" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-21 17:01:52.155631&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="866777" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-21 11:56:57.429278&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="866335" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-18 13:31:34.471466&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="866187" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-17 20:27:32.590789&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="866168" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-17 17:35:06.876344&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="865560" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-14 13:02:56.402066&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="865281" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-12 21:06:40.634042&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="865267" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-05-12 19:31:31.046307&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="862900" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-25 16:10:04.048359&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="861956" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-19 17:27:03.067167&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="861787" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-18 13:19:22.57014&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="861758" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-18 10:47:23.652446&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="861756" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-18 10:42:42.812567&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="860210" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-09 07:32:45.816787&nbsp;UTC</h6>
+          </div>                      </div>
+                                          <div class="timeline-event">
+                                  <div data-eventid="859218" class="welcomeTimelineEvent">
+          <h6>Logged in on 2024-04-03 14:03:18.039273&nbsp;UTC</h6>
+          </div>                      </div>
+                                </div>
+          </div>
+          <div id="home-timeline-2">
+            <div class="subs-tab">
+                            </div>
+          </div>
+          <div id="home-timeline-3">
+          </div>
+        </div>
+        <div class="member-main-content">
+          <h2 class="motto">Concentrate on your code.<br/>Leave the dirty work to the machines.</h2>
+            <p>
+  You may also download plugins from the command line using tools like wget or curl: <code>wget http://127.0.0.1/get/Sheep</code> See the <a href="/help.api">API
+    documentation</a> for more details.
+</p>
+<h2 class="motto">Review Plugins</h2>
+<p>
+  You can vote on a plugin and give comments to let others know if the plugin is good.
+  You can also give suggestions there, but remember not to use reviews as the bug tracker!
+</p>
+<h2 class="motto">Tools for Developers</h2>
+<h3 class="submotto">Build phar files automatically from GitHub source code.</h3>
+<p>
+  Once you have set up your plugins GitHub repo with <a href="/ci">Poggit-CI</a>, Poggit-CI will
+  create a
+  .phar file from your code every time you push commits to the designated branches. This allows your users to
+  update to the latest unreleased snapshots of your plugin without you having to build the plugin and upload it
+  yourself.
+</p>
+<p>
+  When you receive pull requests Poggit also creates Pull Request builds, so you can test the pull request by downloading a
+  build from Poggit CI directly. Pull Request builds may be dangerous to use!
+</p>
+<h3 class="submotto">Virions &mdash; Libraries for PocketMine plugins</h3>
+<p>
+  Some developers write libraries specifically for PocketMine plugins, which you can include automatically within your
+  own builds using Poggit. See the
+  <a href="/virion">Virion Documentation</a> for details. You may find a list of virions
+  <a href="/v">here</a>.
+</p>
+<h3 class="submotto">Lint for PocketMine Plugins</h3>
+<p>
+  Poggit will check your plugin for common problems after creating a build. You can consult the lint result
+  on the Poggit-CI page. The lint result will also be reported as GitHub status checks, which will do
+  <a target="_blank" href="/ghhst">many cool things</a>.
+</p>
+<h3 class="submotto">PHPStan analysis for PocketMine Plugins</h3>
+<p>
+  Poggit will also run <a target="_blank" href="https://github.com/phpstan/phpstan#phpstan---php-static-analysis-tool">PHPStan</a>
+  in a container after injecting virions. Any plugin or composer dependencies (located in plugin.yml & composer.json respectively)
+  will be installed to allow a thorough analysis of the plugin to be done. The results are available through the project CI page.
+</p>
+<p class="remark">
+  Poggit cannot test the builds for you, but there is a script that you can put into your
+  <a href="https://docs.travis-ci.com/user/getting-started/">Travis-CI</a> build which will download builds from
+  Poggit for testing. Refer to
+  <a href="https://github.com/LegendOfMCPE/WorldEditArt/blob/b566a0f/.travis.yml" target="_blank">this example in
+    WorldEditArt</a>.</p>
+        </div>
+      </div>
+
+                  <div class="member-panel-projects">
+            <div class="recent-builds-header"><a href="/ci/JaxkDev"><h4>
+                  Your projects</h4></a></div>
+            <div class="recent-builds-wrapper">
+                      <div class="brief-info" data-project-id="9561">
+
+        <a href="/ci/DiscordBot-PMMP/DiscordBot/DiscordBot">
+            DiscordBot        </a>
+        <div class="remark">Total: 43 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1704155024.627"></span>
+        </div>
+                    <a href="/ci/DiscordBot-PMMP/DiscordBot/DiscordBot/43">
+              <span style='font-family:"Courier New", monospace;'>
+            #43 (&amp;2963C)
+        </span>
+                </a>
+            <sup class='hover-title' title="#43 is the build number in your project.
+&amp;2963C is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="4980">
+
+        <a href="/ci/SOF3/InfoAPI/InfoAPI">
+            InfoAPI        </a>
+        <div class="remark">Total: 186 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1688747970.527"></span>
+        </div>
+                    <a href="/ci/SOF3/InfoAPI/InfoAPI/134">
+              <span style='font-family:"Courier New", monospace;'>
+            #134 (&amp;26CD6)
+        </span>
+                </a>
+            <sup class='hover-title' title="#134 is the build number in your project.
+&amp;26CD6 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="12614">
+
+        <a href="/ci/JaxkDev/LibSkin/SkinThief">
+            SkinThief        </a>
+        <div class="remark">Total: 4 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1686503918.222"></span>
+        </div>
+                    <a href="/ci/JaxkDev/LibSkin/SkinThief/4">
+              <span style='font-family:"Courier New", monospace;'>
+            #4 (&amp;264E1)
+        </span>
+                </a>
+            <sup class='hover-title' title="#4 is the build number in your project.
+&amp;264E1 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="5448">
+
+        <a href="/ci/JaxkDev/Vehicles/Vehicles">
+            Vehicles        </a>
+        <div class="remark">Total: 45 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1686251534.982"></span>
+        </div>
+                    <a href="/ci/JaxkDev/Vehicles/Vehicles/29">
+              <span style='font-family:"Courier New", monospace;'>
+            #29 (&amp;1BE85)
+        </span>
+                </a>
+            <sup class='hover-title' title="#29 is the build number in your project.
+&amp;1BE85 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="4976">
+
+        <a href="/ci/JaxkDev/ClikActions/ClikActions">
+            ClikActions        </a>
+        <div class="remark">Total: 3 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1665661471.059"></span>
+        </div>
+                    <a href="/ci/JaxkDev/ClikActions/ClikActions/3">
+              <span style='font-family:"Courier New", monospace;'>
+            #3 (&amp;23C49)
+        </span>
+                </a>
+            <sup class='hover-title' title="#3 is the build number in your project.
+&amp;23C49 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="4914">
+
+        <a href="/ci/JaxkDev/koth/KOTH">
+            KOTH        </a>
+        <div class="remark">Total: 22 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1656974870.127"></span>
+        </div>
+                    <a href="/ci/JaxkDev/koth/KOTH/15">
+              <span style='font-family:"Courier New", monospace;'>
+            #15 (&amp;21FD6)
+        </span>
+                </a>
+            <sup class='hover-title' title="#15 is the build number in your project.
+&amp;21FD6 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="3631">
+
+        <a href="/ci/JaxkDev/Bounty/Bounty">
+            Bounty        </a>
+        <div class="remark">Total: 56 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1628089679.962"></span>
+        </div>
+                    <a href="/ci/JaxkDev/Bounty/Bounty/42">
+              <span style='font-family:"Courier New", monospace;'>
+            #42 (&amp;107FD)
+        </span>
+                </a>
+            <sup class='hover-title' title="#42 is the build number in your project.
+&amp;107FD is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="4764">
+
+        <a href="/ci/JaxkDev/JukeBox-pmmp/JukeBox-pmmp">
+            JukeBox-pmmp        </a>
+        <div class="remark">Total: 25 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1575808337.954"></span>
+        </div>
+                    <a href="/ci/JaxkDev/JukeBox-pmmp/JukeBox-pmmp/23">
+              <span style='font-family:"Courier New", monospace;'>
+            #23 (&amp;10771)
+        </span>
+                </a>
+            <sup class='hover-title' title="#23 is the build number in your project.
+&amp;10771 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="2320">
+
+        <a href="/ci/JaxkDev/MCPEToDiscord/MCPE_DISCORD">
+            MCPE_DISCORD        </a>
+        <div class="remark">Total: 91 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1575478853.139"></span>
+        </div>
+                    <a href="/ci/JaxkDev/MCPEToDiscord/MCPE_DISCORD/84">
+              <span style='font-family:"Courier New", monospace;'>
+            #84 (&amp;106E5)
+        </span>
+                </a>
+            <sup class='hover-title' title="#84 is the build number in your project.
+&amp;106E5 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+              <div class="brief-info" data-project-id="3016">
+
+        <a href="/ci/YassenTrick/SizePlayerPMMP/SizePlayer">
+            SizePlayer        </a>
+        <div class="remark">Total: 83 development
+          builds</div>
+        <div class="remark">Latest: <span class="time-elapse" data-timestamp="1556986822.786"></span>
+        </div>
+                    <a href="/ci/YassenTrick/SizePlayerPMMP/SizePlayer/69">
+              <span style='font-family:"Courier New", monospace;'>
+            #69 (&amp;E676)
+        </span>
+                </a>
+            <sup class='hover-title' title="#69 is the build number in your project.
+&amp;E676 is a unique build ID for all Poggit-CI builds.">(?)</sup>      </div>
+                    </div>
+          </div>
+                    </div>
+                </div>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div id="footer">
+        <ul class="footer-navbar">
+          <li>Powered by Poggit 1.0-beta                        </li>
+          <li id="online-user-count"></li>
+          <li>&copy; 2024 Poggit</li>
+          <span id="flat-cp">Some icons by www.freepik.com and <a href="https://icons8.com">Icon pack by Icons8</a></span>
+        </ul>
+        <ul class="footer-navbar">
+          <li><a href="/tos">Terms of Service</a></li>
+          <li><a target="_blank" href="https://discord.gg/XDugAkJ">Contact @ Discord</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit">Source Code</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit/issues">Bugs / Suggestions</a></li>
+          <li><a href="https://twitter.com/poggitci" class="twitter-follow-button" data-show-screen-name="false"
+                 data-show-count="true">Follow @poggitci</a></li>
+          <li><a href="#" onclick="$('html, body').animate({scrollTop: 0},500);">Back to Top</a></li>
+        </ul>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/toggles.js"></script>
+      <script type="text/javascript" src="js/jquery.form.js"></script>
+      <script type="text/javascript" src="js/mobile.js"></script>
+      <script type="text/javascript" src="js/std.js"></script>
+      <script type="text/javascript" src="js/jquery.paginate.js"></script>
+</body>
+</html>

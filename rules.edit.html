@@ -1,0 +1,344 @@
+      <html>
+      <head
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+        <title>View rules</title>
+                          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description"
+            content="View rules">
+      <meta name="keywords"
+            content="View rules,plugin,PocketMine,pocketmine plugins,MCPE plugins,Poggit,PocketMine-MP,PMMP"/>
+      <meta property="og:site_name" content="Poggit"/>
+      <meta property="og:image" content="res/poggit-icon.png"/>
+      <meta property="og:title" content="View rules"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:url" content="http://127.0.0.1"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta name="twitter:site" content="poggitci"/>
+      <meta name="twitter:title" content="View rules"/>
+      <meta name="twitter:description" content=""/>
+      <meta name="theme-color" content="#292b2c">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <link type="image/x-icon" rel="icon" href="/res/poggit-icon.ico">
+        <script>var sessionData = {"path":{"relativeRoot":"/"},"app":{"clientId":"27a6a18555e95fce1a74"},"session":{"antiForge":"73fe5510fce0c1785d6a9d3bcec848ebafb255193cad9e3027df1811db83ef94d3b7ca650579ac1901f75974c3955d0764790a3eb196436561eca560de44eef8","isLoggedIn":false,"loginName":"","adminLevel":1},"opts":{},"meta":{"isDebug":false}};
+var PoggitConsts = {"AdminLevel":{"GUEST":0,"MEMBER":1,"CONTRIBUTOR":2,"MODERATOR":3,"REVIEWER":4,"ADM":5},"Staff":{"adeynes":4,"brandon15811":5,"cortexpe":4,"dktapps":5,"ethaniccc":4,"fuyutsuki":4,"ifera":4,"jacknoordhuis":4,"jasonw4331":5,"javierleon9966":4,"jaxkdev":5,"laith98dev":4,"matcracker":4,"sandertv":4,"sof3":5,"sylvrs":4,"thunder33345":4},"BuildClass":{"1":"Dev","4":"PR"},"LintLevel":{"0":"OK","1":"Lint","2":"Warning","3":"Error","4":"Build Error"},"Config":{"MAX_PHAR_SIZE":2097152,"MAX_ZIPBALL_SIZE":10485760,"MAX_RAW_VIRION_SIZE":5242880,"MAX_REVIEW_LENGTH":512,"MAX_VERSION_LENGTH":20,"MAX_KEYWORD_COUNT":100,"MAX_KEYWORD_LENGTH":20,"MIN_SHORT_DESC_LENGTH":10,"MAX_SHORT_DESC_LENGTH":128,"MIN_DESCRIPTION_LENGTH":100,"MAX_LICENSE_LENGTH":51200,"MIN_CHANGELOG_LENGTH":10,"MAX_WEEKLY_BUILDS":100,"MAX_WEEKLY_PROJECTS":6,"RECENT_BUILDS_RANGE":86400,"MIN_PUBLIC_RELEASE_STATE":3,"MIN_DEV_STATE":3,"VOTED_THRESHOLD":5},"ReleaseState":{"draft":0,"rejected":1,"submitted":2,"checked":3,"voted":4,"approved":5,"featured":6}};
+</script>      <!--suppress JSUnresolvedFunction -->
+<!--        <script>-->
+<!--        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');        ga("create", "UA-93677016-1", "auto");        ga('set', 'dimension1', "Guest");-->
+<!--        ga('set', 'dimension2', "Guest");-->
+<!--        ga('set', 'dimension3', "RulesEditModule");-->
+<!--        ga('send', 'pageview');-->
+<!--      </script> commented by jaxkdev for local-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+              <link type="text/css" rel="stylesheet" href="/res/style.css">
+              <link type="text/css" rel="stylesheet" href="/res/style.css">
+        <style>.toggle-slide{overflow:hidden;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;direction:ltr;text-align:center}div.disabled>.toggle-slide{opacity:.7;pointer-events:none}.toggle-slide .toggle-on,.toggle-slide .toggle-off,.toggle-slide .toggle-blob{float:left}.toggle-slide .toggle-blob{position:relative;z-index:99;cursor:hand;cursor:grab}</style><style>.toggle-light .toggle-slide{border-radius:9999px;box-shadow:0 0 0 1px #999}.toggle-light .toggle-on,.toggle-light .toggle-off{font-size:11px;font-weight:500}.toggle-light .toggle-on,.toggle-light .toggle-select .toggle-inner .active{background:#45a31f;box-shadow:inset 2px 2px 6px rgba(0,0,0,0.2);text-shadow:1px 1px rgba(0,0,0,0.2);color:rgba(255,255,255,0.8)}.toggle-light .toggle-off,.toggle-light .toggle-select .toggle-on{color:rgba(0,0,0,0.6);text-shadow:0 1px rgba(255,255,255,0.2);background:-webkit-linear-gradient(#cfcfcf,#f5f5f5);background:linear-gradient(#cfcfcf,#f5f5f5)}.toggle-light .toggle-blob{border-radius:50px;background:-webkit-linear-gradient(#f5f5f5,#cfcfcf);background:linear-gradient(#f5f5f5,#cfcfcf);box-shadow:1px 1px 2px #888}.toggle-light .toggle-blob:hover{background:-webkit-linear-gradient(#e4e4e4,#f9f9f9);background:linear-gradient(#e4e4e4,#f9f9f9)}</style><style>.paginate-pagination ul{margin:5px;list-style:none}.paginate-pagination ul:after{content:' ';display:table;clear:both}.paginate-pagination ul>li{float:left;margin-right:3px}.paginate-pagination ul>li>a.page{display:block;height:30px;width:30px;text-align:center;line-height:30px;border:1px solid #ddd;background:white;text-decoration:none;cursor:pointer}.paginate-pagination ul>li>a.page:hover{color:#fff;background-color:#0275d8}.paginate-pagination ul>li>a.page.active{color:#fff;background-color:#0275d8;cursor:default}.paginate-pagination ul>li>a.page-next.deactive,.paginate-pagination ul>li>a.page-prev.deactive{opacity:.7;cursor:default}</style>      </head>
+      <body>
+            <div id="header" class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" role="navigation">
+          <div class="tabletlogo">
+            <div class="navbar-brand tm">
+              <a href="/">
+                <img class="logo" src="/res/poggit-icon.png"/>
+                Poggit
+                                </a></div>
+            <button class="navbar-toggler navbar-toggler-right mr-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          </div>
+          <div id="navbarNavAltMarkup" class="navbar-right navbuttons collapse navbar-collapse">
+            <div class="navbar-middle">
+              <ul class="navbar-nav navbuttons collapse navbar-collapse">
+                <li class="nav-item navbutton" data-target="">Home</li>
+                <li class="nav-item navbutton" data-target="plugins">Releases</li>
+                <li class="nav-item navbutton" data-target="ci/recent">Dev</li>
+                                  <li class="nav-item navbutton" data-target="faq">FAQ</li>
+                <!--                        <li class="nav-item navbutton extlink" data-target="https://poggit.github.io/support">Help</li>-->
+                <!-- TODO Finish the Help page, then add this back -->
+              </ul>
+            </div>
+            <ul class="navbar-nav">
+                                  <li class="nav-item login-buttons"><span onclick='login()'>Login with GitHub</span></li>
+                  <li class="nav-item login-buttons"><span onclick="login(undefined, true)">Custom Login</span>
+                  </li>
+                            </ul>
+          </div>
+        </nav>
+      </div>
+                      <div id="body">
+        <h1>Rules Viewer</h1>
+        <h2>Rule list</h2>
+                  <ul>
+                          <li class="rule-holder" data-rule-id="A1">
+                <strong>A1</strong>:
+                <strong class="editable" data-field="title">Serves a purpose</strong>
+                (261)<br/>
+                <span class="editable" data-field="content">Plugins must serve a purpose which cannot be replicated using PocketMine's built-in features. Plugins which only provide command aliases or shortcuts to a built-in features will not be approved.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A2">
+                <strong>A2</strong>:
+                <strong class="editable" data-field="title">Serve a specific purpose</strong>
+                (108)<br/>
+                <span class="editable" data-field="content">The plugin must serve a **specific** purpose and be useful to the majority of users. Core plugins are not accepted, because they are only useful on specific private servers. Plugins that contain many mutually irrelevant features are also not allowed, because they are a major source of bloatware.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A3">
+                <strong>A3</strong>:
+                <strong class="editable" data-field="title">No duplicates</strong>
+                (349)<br/>
+                <span class="editable" data-field="content">If there is another plugin that covers every single feature your plugin has, you must not submit yours, unless the existing one has been outdated and unmaintained for more than one month. You may want to explain why your plugin is better than the existing ones in the description.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A4">
+                <strong>A4</strong>:
+                <strong class="editable" data-field="title">No remote code execution</strong>
+                (6)<br/>
+                <span class="editable" data-field="content">If the plugin requires an external API, it must either be from a reputable provider (e.g. Google APIs) or has high transparency. It must be clear that the plugin cannot be used as a backdoor for hacking servers. In particular, remote code execution is strictly prohibited. This includes auto-updaters from sources other than Poggit Release.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A5a">
+                <strong>A5a</strong>:
+                <strong class="editable" data-field="title">No artificial limitations</strong>
+                (6)<br/>
+                <span class="editable" data-field="content">Artificially created limitations in the plugin are not allowed, particularly restrictions to coerce owners into purchasing plans, licenses, subscription to unlock said self imposed features.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A5b">
+                <strong>A5b</strong>:
+                <strong class="editable" data-field="title">No unsolicited advertisement</strong>
+                (19)<br/>
+                <span class="editable" data-field="content">The plugin must not be intentionally used as medium to advertise any external (paid or free) servers, resources and plugins, other than plugins released on Poggit, unless explicitly requested by the user (such as through a plugin help command).</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A5c">
+                <strong>A5c</strong>:
+                <strong class="editable" data-field="title">Use of external API</strong>
+                (10)<br/>
+                <span class="editable" data-field="content">External API (i.e. online ones, especially those involving HTTP(S) requests) can only be used in plugins when reasonably necessarily, such as when it involves a public database or large dataset that cannot be practically distributed to users.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A5d">
+                <strong>A5d</strong>:
+                <strong class="editable" data-field="title">Availability of external API</strong>
+                (11)<br/>
+                <span class="editable" data-field="content">External APIs used by plugins must have a free plan with reasonable rate limit (even if just a free trial period).</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A6">
+                <strong>A6</strong>:
+                <strong class="editable" data-field="title">Libraries and API plugins</strong>
+                (180)<br/>
+                <span class="editable" data-field="content">Libraries must be as virions. They must not be released as individual plugins. API plugins which handle state between other plugins must be conveted into a library using the Virion 3.1 or newer specification.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A7">
+                <strong>A7</strong>:
+                <strong class="editable" data-field="title">Only submit your own plugins</strong>
+                (135)<br/>
+                <span class="editable" data-field="content">You may only submit plugins you have written yourself. If a user leaves a plugin abandoned or archived, you may submit a fork of it under a different name along with proof of the original author's permission or evidence of no response within 2 weeks of requesting an update.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="A8">
+                <strong>A8</strong>:
+                <strong class="editable" data-field="title">Complete and Functional</strong>
+                (6)<br/>
+                <span class="editable" data-field="content">Plugins must be **complete and functional**. Plugins with partial feature completion must use the experimental flag and must not list said feature in the description.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B10">
+                <strong>B10</strong>:
+                <strong class="editable" data-field="title">Use of hardcoded constants</strong>
+                (49)<br/>
+                <span class="editable" data-field="content">Plugins must use methods or constants provided by PocketMine API for vanilla data where available. In particular, use the `Vanilla*` methods instead of `BlockFactory::get()`, `ItemFactory::get()` etc. Parse string values with `StringTo*Parser` instead of using integer IDs.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B1a">
+                <strong>B1a</strong>:
+                <strong class="editable" data-field="title">No development API versions</strong>
+                (121)<br/>
+                <span class="editable" data-field="content">Plugins must only support officially released API versions from the PocketMine-MP stable branch.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B1b">
+                <strong>B1b</strong>:
+                <strong class="editable" data-field="title">No unofficial software support</strong>
+                (86)<br/>
+                <span class="editable" data-field="content">Plugins must not advertise support for unofficial software, such as forks of PocketMine-MP.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B2">
+                <strong>B2</strong>:
+                <strong class="editable" data-field="title">No obfuscation</strong>
+                (30)<br/>
+                <span class="editable" data-field="content">The source code must be readable and not obfuscated. All PHP code can eventually be deobfuscated, so there is really no point of close-sourcing them. In addition, the code must be sufficiently readable using &quot;normal&quot; practices, e.g. prefer arrays over numbered variable names.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B3">
+                <strong>B3</strong>:
+                <strong class="editable" data-field="title">No useless messages in startup/shutdown</strong>
+                (664)<br/>
+                <span class="editable" data-field="content">Plugins must not output unnecessary status messages like &quot;I have been enabled&quot;, &quot;Author: Xxx&quot;, etc., unless the plugin startup/shutdown takes really much time (more than 1 second) such that the user may become impatient. See https://forums.pmmp.io/threads/clean-up-our-consoles.5656/</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B4a">
+                <strong>B4a</strong>:
+                <strong class="editable" data-field="title">Default must be English</strong>
+                (162)<br/>
+                <span class="editable" data-field="content">It is great if your plugin supports other languages, but since English is the most common languages that everyone knows, the default language must be set as English.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B4b">
+                <strong>B4b</strong>:
+                <strong class="editable" data-field="title">Political and Religious Neutrality</strong>
+                (7)<br/>
+                <span class="editable" data-field="content">Plugins must not contain politically or religiously biased content.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B5">
+                <strong>B5</strong>:
+                <strong class="editable" data-field="title">Declare dependencies</strong>
+                (143)<br/>
+                <span class="editable" data-field="content">Plugins which use methods of other plugins must declare said other plugins as dependencies in both the plugin.yml and submission form. This is to ensure that the plugin will not crash if the dependency is not installed. If the dependency is optional, it can be declared as soft-dependency, but is not required. Required dependency plugins which are not previously released on poggit must not be used.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B7">
+                <strong>B7</strong>:
+                <strong class="editable" data-field="title">[Removed] Declare protocol</strong>
+                (71)<br/>
+                <span class="editable" data-field="content">[This rule has been removed] Plugins using *any* item from the `pocketmine\network\mcpe` namespace must declare `mcpe-protocol` in plugin.yml</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="B8">
+                <strong>B8</strong>:
+                <strong class="editable" data-field="title">Unnecessary use of protocol</strong>
+                (0)<br/>
+                <span class="editable" data-field="content">Plugins must not use packet handling to implement features which can be implemented using the API. e.g. Use `PlayerInteractEvent` instead of `InventoryTransactionPacket`.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C1a">
+                <strong>C1a</strong>:
+                <strong class="editable" data-field="title">Namespace format</strong>
+                (598)<br/>
+                <span class="editable" data-field="content">All plugins must choose a **unique** namespace that will not be accidentally collided by other plugins. The plugin must begin with the author name (unless its an official plugin, because the namespace `pocketmine` is disallowed), followed by any identifier such that the author himself remembers which plugin it corresponds to. The recommended namespace format is `AuthorName\PluginName`. The author name should use one that corresponds to the GitHub username/org name to prevent collision.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C1b">
+                <strong>C1b</strong>:
+                <strong class="editable" data-field="title">Stay in your namespace</strong>
+                (146)<br/>
+                <span class="editable" data-field="content">All classes, interfaces and traits declared by plugins must be under this unique namespace (or subnamespaces). This includes libraries bundled with the plugin. Consider using the [virion framework](https://poggit.pmmp.io/virion), which provides a convenient way of shading libraries (i.e. refactoring libraries into your plugins namespace).</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C1c">
+                <strong>C1c</strong>:
+                <strong class="editable" data-field="title">Changing the namespace</strong>
+                (19)<br/>
+                <span class="editable" data-field="content">Plugin namespace should not change once it has been submitted unless there is an enormous API change that requires changing the namespace. But developers are recommended to obsolete the old version and submit a new plugin instead.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C2a">
+                <strong>C2a</strong>:
+                <strong class="editable" data-field="title">Command fallback prefix</strong>
+                (336)<br/>
+                <span class="editable" data-field="content">If the plugin registers commands by calling `CommandMap-&gt;register` directly, the fallbackPrefix parameter passed to the register function must be the plugin name. Plugins are not allowed to use its initials, acronyms, etc. for the fallback prefix.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C2b">
+                <strong>C2b</strong>:
+                <strong class="editable" data-field="title">Plugin-identifiable</strong>
+                (302)<br/>
+                <span class="editable" data-field="content">All commands must implement the PluginOwned interface and return their plugin instance. It's recommended to use the `PluginOwnedTrait` utility trait provided by PocketMine for easier implementation.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C3">
+                <strong>C3</strong>:
+                <strong class="editable" data-field="title">Permission names</strong>
+                (484)<br/>
+                <span class="editable" data-field="content">If the plugin registers permissions, all permission strings must start with the plugin name (does not need to contain the author name like the namespace). The permission name should only consist of alphabets, digits, hyphens and dots. Permission names must match in both the plugin.yml and any command class files where applicable. Commands must be assigned to plugin created permissions.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C4">
+                <strong>C4</strong>:
+                <strong class="editable" data-field="title">Persistant data must be namespaced</strong>
+                (5)<br/>
+                <span class="editable" data-field="content">Plugin generic data should be saved only inside the plugin's data folder. Entity/Item-specific data should be saved inside a specific CompoundTag named with the plugin name. Externally-saved data (e.g. MySQL) should allow some configuration, preferably prefixed with plugin name, to prevent collision with other plugins.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="C5">
+                <strong>C5</strong>:
+                <strong class="editable" data-field="title">Do not use hardcoded commands to perform operations</strong>
+                (3)<br/>
+                <span class="editable" data-field="content">The `dispatchCommand` method must not be used unless a command template is written by the author. Dependency on `dispatchCommand` to operate plugin methods may cease to work due to commands being subject to change without warning.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="D1">
+                <strong>D1</strong>:
+                <strong class="editable" data-field="title">Detailed description</strong>
+                (515)<br/>
+                <span class="editable" data-field="content">The description should give an idea what the plugin is about, why it is useful, etc.. Do not assume everyone knows what you're talking about; explain it with clear detail. Screenshots or videos on their own are not enough.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="D2">
+                <strong>D2</strong>:
+                <strong class="editable" data-field="title">The description must be available in English</strong>
+                (19)<br/>
+                <span class="editable" data-field="content">Translations are allowed, but English must be available first. We assume English as the language that most users know.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="D3">
+                <strong>D3</strong>:
+                <strong class="editable" data-field="title">Clean description</strong>
+                (109)<br/>
+                <span class="editable" data-field="content">Do not provide irrelevant or duplicated information in the description. See [description guide](https://github.com/poggit/support/blob/master/description-format.md) for details. Do not advertise in the description. (Leaving a reasonable number of contacts is allowed)</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="D4">
+                <strong>D4</strong>:
+                <strong class="editable" data-field="title">Beautiful description</strong>
+                (153)<br/>
+                <span class="editable" data-field="content">Format your description using GitHub Markdown. The [description formatting documentation](https://github.com/poggit/support/blob/master/description-formatting.md) helps formatting according to Poggit's special mechanisms like pagination. You may use the [Markdown Sandbox](https://jbt.github.io/markdown-editor/) to preview your description.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="D5">
+                <strong>D5</strong>:
+                <strong class="editable" data-field="title">Informative changelog</strong>
+                (123)<br/>
+                <span class="editable" data-field="content">Plugin updates must have a changelog. The changelog must be formatted using GitHub markdown. Changelog contents must contain user-readable information about the changes made in the update. Do not include irrelevant information such as &quot;fixed a typo&quot; or &quot;updated README&quot;.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="D6">
+                <strong>D6</strong>:
+                <strong class="editable" data-field="title">Pick a license carefully</strong>
+                (450)<br/>
+                <span class="editable" data-field="content">All plugins submitted must be under an open source license as defined by the [Software Package Data Exchange (SPDX)](https://spdx.github.io/license-list-data/). Licenses must be included in a LICENSE file in the root of the plugin.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="S1">
+                <strong>S1</strong>:
+                <strong class="editable" data-field="title">Do not block the main thread</strong>
+                (101)<br/>
+                <span class="editable" data-field="content">Except during startup/shutdown, plugins must avoid blocking the main thread with operations that cause the thread to wait for a signal. Apart from small-scale local file IO operations (compare with the extent used in PocketMine internals), no blocking operations (e.g. curl calls, MySQL queries, heavy SQLite calls, O(players) scanning) are allowed to be executed on the main thread, or to have the main thread wait for such operations.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="S2">
+                <strong>S2</strong>:
+                <strong class="editable" data-field="title">SQL parameters must be escaped</strong>
+                (16)<br/>
+                <span class="editable" data-field="content">Data must NEVER be interpolated into SQL strings using interpolation, unless they are explicitly escaped using the `mysqli::escape_string`/`SQLite3::escapeString` function. No exceptions even if you are sure they are integers, player names or validated otherwise. Using libasynql or using `bind_param()`/`bindValue()` would be even better.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="S3">
+                <strong>S3</strong>:
+                <strong class="editable" data-field="title">No O(accounts)</strong>
+                (52)<br/>
+                <span class="editable" data-field="content">Plugins must not run code that allocates O(n) memory or above, or run on the main thread functions that take O(n) time or above, where n is a quantity that increases persistently and significantly over time, e.g. number of registered players, number of blocks placed over time, etc. In particular, storing stats for all players in a Config file is an example of violation of this rule.</span>
+              </li>
+                          <li class="rule-holder" data-rule-id="S4">
+                <strong>S4</strong>:
+                <strong class="editable" data-field="title">Use permissions to block commands.</strong>
+                (13)<br/>
+                <span class="editable" data-field="content">Do not use PlayerCommandPreprocessEvent/CommandEvent to block users from running commands. This is vulnerable to alias attacks and formatting attacks.</span>
+              </li>
+                    </ul>
+        <div id="add-rule-dialog" style="display: none;" title="Add rule">
+          <label for="dialog-id">ID</label> <input type="text" id="dialog-id"/><br/>
+          <label for="dialog-title">Title</label> <input type="text" id="dialog-title"/><br/>
+          <label for="dialog-content">Content</label>
+          <textarea id="dialog-content" cols="200" rows="10"></textarea>
+        </div>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div id="footer">
+        <ul class="footer-navbar">
+          <li>Powered by Poggit 1.0-beta                        </li>
+          <li id="online-user-count"></li>
+          <li>&copy; 2024 Poggit</li>
+          <span id="flat-cp">Some icons by www.freepik.com and <a href="https://icons8.com">Icon pack by Icons8</a></span>
+        </ul>
+        <ul class="footer-navbar">
+          <li><a href="/tos">Terms of Service</a></li>
+          <li><a target="_blank" href="https://discord.gg/XDugAkJ">Contact @ Discord</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit">Source Code</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit/issues">Bugs / Suggestions</a></li>
+          <li><a href="https://twitter.com/poggitci" class="twitter-follow-button" data-show-screen-name="false"
+                 data-show-count="true">Follow @poggitci</a></li>
+          <li><a href="#" onclick="$('html, body').animate({scrollTop: 0},500);">Back to Top</a></li>
+        </ul>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/toggles.js"></script>
+      <script type="text/javascript" src="js/jquery.form.js"></script>
+      <script type="text/javascript" src="js/mobile.js"></script>
+      <script type="text/javascript" src="js/std.js"></script>
+      <script type="text/javascript" src="js/jquery.paginate.js"></script>
+</body>
+</html>
