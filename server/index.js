@@ -43,8 +43,23 @@ http.createServer(function (request, response) {
     fs.readFile(filePath, function(error, content) {
         if (error) {
             if(error.code === 'ENOENT'){
-                response.writeHead(200);
-                response.end("Sorry the file '" + filePath + "' could not be found on disk.", 'utf-8');
+                fs.readFile(filePath+'.html', function(error, content) {
+                    if (error) {
+                        if(error.code === 'ENOENT'){
+                            response.writeHead(200);
+                            response.end("Sorry the file '" + filePath + "' could not be found on disk.", 'utf-8');
+                        }
+                        else {
+                            response.writeHead(500);
+                            response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+                            response.end();
+                        }
+                    }
+                    else {
+                        response.writeHead(200, { 'Content-Type': contentType });
+                        response.end(content, 'utf-8');
+                    }
+                });
             }
             else {
                 response.writeHead(500);
