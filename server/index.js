@@ -10,7 +10,7 @@ if (process.argv.length > 2) {
 http.createServer(function (request, response) {
     console.log('Request - ' + request.url);
 
-    var filePath = '.' + request.url;
+    var filePath = '.' + request.url.split('?')[0];
     if (filePath === './')
         filePath = './index.html';
 
