@@ -1,0 +1,3114 @@
+      <html>
+      <head
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+        <title>EconomyAPI v5.7.3-PM4 by poggit-orphanage</title>
+        <meta property="article:published_time" content="2017-02-28T00:10:19+00:00"/>
+        <meta property="article:modified_time" content="2021-12-21T12:19:18+00:00"/>
+        <meta property="article:author" content="EconomyAPI"/>
+        <meta property="article:section" content="Plugins"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description"
+            content="EconomyAPI v5.7.3-PM4">
+      <meta name="keywords"
+            content="EconomyAPI v5.7.3-PM4,airport,economy,economyplus,economyS,land,money,onebone,tax,plugin,PocketMine,pocketmine plugins,MCPE plugins,Poggit,PocketMine-MP,PMMP"/>
+      <meta property="og:site_name" content="Poggit"/>
+      <meta property="og:image" content="https://raw.githubusercontent.com/poggit-orphanage/EconomyS/98333a83f2f4648e07a50b9b0d5780dc02e6a5d6/EconomyAPI/icon.png"/>
+      <meta property="og:title" content="EconomyAPI v5.7.3-PM4"/>
+      <meta property="og:type" content="article"/>
+      <meta property="og:url" content="http://127.0.0.1/"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta name="twitter:site" content="poggitci"/>
+      <meta name="twitter:title" content="EconomyAPI v5.7.3-PM4"/>
+      <meta name="twitter:description" content="EconomyS by OneBone"/>
+      <meta name="theme-color" content="#292b2c">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="mobile-web-app-capable" content="yes">
+      <link type="image/x-icon" rel="icon" href="/res/poggit-icon.ico">
+        <script>var sessionData = {"path":{"relativeRoot":"/"},"app":{"clientId":"ID"},"session":{"antiForge":"IID","isLoggedIn":true,"loginName":"JaxkDev","adminLevel":5},"opts":{"allowSu":true,"usePages":false,"showIcons":true,"darkMode":true},"meta":{"isDebug":false}};
+var PoggitConsts = {"AdminLevel":{"GUEST":0,"MEMBER":1,"CONTRIBUTOR":2,"MODERATOR":3,"REVIEWER":4,"ADM":5},"Staff":{"adeynes":4,"brandon15811":5,"cortexpe":4,"dktapps":5,"ethaniccc":4,"fuyutsuki":4,"ifera":4,"jacknoordhuis":4,"jasonw4331":5,"javierleon9966":4,"jaxkdev":5,"laith98dev":4,"matcracker":4,"sandertv":4,"sof3":5,"sylvrs":4,"thunder33345":4},"BuildClass":{"1":"Dev","4":"PR"},"LintLevel":{"0":"OK","1":"Lint","2":"Warning","3":"Error","4":"Build Error"},"Config":{"MAX_PHAR_SIZE":2097152,"MAX_ZIPBALL_SIZE":10485760,"MAX_RAW_VIRION_SIZE":5242880,"MAX_REVIEW_LENGTH":512,"MAX_VERSION_LENGTH":20,"MAX_KEYWORD_COUNT":100,"MAX_KEYWORD_LENGTH":20,"MIN_SHORT_DESC_LENGTH":10,"MAX_SHORT_DESC_LENGTH":128,"MIN_DESCRIPTION_LENGTH":100,"MAX_LICENSE_LENGTH":51200,"MIN_CHANGELOG_LENGTH":10,"MAX_WEEKLY_BUILDS":100,"MAX_WEEKLY_PROJECTS":6,"RECENT_BUILDS_RANGE":86400,"MIN_PUBLIC_RELEASE_STATE":3,"MIN_DEV_STATE":3,"VOTED_THRESHOLD":5},"ReleaseState":{"draft":0,"rejected":1,"submitted":2,"checked":3,"voted":4,"approved":5,"featured":6}};
+</script>      <!--suppress JSUnresolvedFunction -->
+<!--        <script>-->
+<!--        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');        ga("create", "UA-93677016-1", "auto");        ga('set', 'dimension1', "Member");-->
+<!--        ga('set', 'dimension2', "Admin");-->
+<!--        ga('set', 'dimension3', "ReleaseDetailsModule");-->
+<!--        ga('send', 'pageview');-->
+<!--      </script>-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+              <link type="text/css" rel="stylesheet" href="/res/style-dark.css">
+        <style>.toggle-slide{overflow:hidden;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;direction:ltr;text-align:center}div.disabled>.toggle-slide{opacity:.7;pointer-events:none}.toggle-slide .toggle-on,.toggle-slide .toggle-off,.toggle-slide .toggle-blob{float:left}.toggle-slide .toggle-blob{position:relative;z-index:99;cursor:hand;cursor:grab}</style><style>.toggle-light .toggle-slide{border-radius:9999px;box-shadow:0 0 0 1px #999}.toggle-light .toggle-on,.toggle-light .toggle-off{font-size:11px;font-weight:500}.toggle-light .toggle-on,.toggle-light .toggle-select .toggle-inner .active{background:#45a31f;box-shadow:inset 2px 2px 6px rgba(0,0,0,0.2);text-shadow:1px 1px rgba(0,0,0,0.2);color:rgba(255,255,255,0.8)}.toggle-light .toggle-off,.toggle-light .toggle-select .toggle-on{color:rgba(0,0,0,0.6);text-shadow:0 1px rgba(255,255,255,0.2);background:-webkit-linear-gradient(#cfcfcf,#f5f5f5);background:linear-gradient(#cfcfcf,#f5f5f5)}.toggle-light .toggle-blob{border-radius:50px;background:-webkit-linear-gradient(#f5f5f5,#cfcfcf);background:linear-gradient(#f5f5f5,#cfcfcf);box-shadow:1px 1px 2px #888}.toggle-light .toggle-blob:hover{background:-webkit-linear-gradient(#e4e4e4,#f9f9f9);background:linear-gradient(#e4e4e4,#f9f9f9)}</style><style>.paginate-pagination ul{margin:5px;list-style:none}.paginate-pagination ul:after{content:' ';display:table;clear:both}.paginate-pagination ul>li{float:left;margin-right:3px}.paginate-pagination ul>li>a.page{display:block;height:30px;width:30px;text-align:center;line-height:30px;border:1px solid #ddd;background:white;text-decoration:none;cursor:pointer}.paginate-pagination ul>li>a.page:hover{color:#fff;background-color:#0275d8}.paginate-pagination ul>li>a.page.active{color:#fff;background-color:#0275d8;cursor:default}.paginate-pagination ul>li>a.page-next.deactive,.paginate-pagination ul>li>a.page-prev.deactive{opacity:.7;cursor:default}</style><style>.ui-tabs-vertical{padding:0;overflow:hidden}.ui-tabs-vertical .ui-widget-header{border:0}.ui-tabs-vertical .ui-tabs-nav{float:left;width:10em;background:#CCC;border-radius:4px 0 0 4px;border-right:1px solid gray}.ui-tabs-vertical .ui-tabs-nav li{width:100%;margin:.2em 0;border:1px solid gray;border-width:1px 0 1px 1px;border-radius:4px 0 0 4px;overflow:hidden;position:relative;right:-2px}.ui-tabs-vertical .ui-tabs-nav li a{display:block;width:100%;padding:.6em 1em}.ui-tabs-vertical .ui-tabs-nav li a:hover{cursor:pointer}.ui-tabs-vertical .ui-tabs-nav li.ui-state-active{margin-bottom:.2em;padding-bottom:0;border-right:1px solid white}.ui-tabs-vertical .ui-tabs-nav li:last-child{margin-bottom:10px}.ui-tabs-vertical .ui-tabs-panel{float:left;width:-webkit-calc(100% - 11em);width:calc(100% - 11em);box-sizing:border-box}</style>        <meta name="twitter:image:src"
+              content="https://raw.githubusercontent.com/poggit-orphanage/EconomyS/98333a83f2f4648e07a50b9b0d5780dc02e6a5d6/EconomyAPI/icon.png">
+                  <script>var releaseDetails = {"releaseId":8365,"name":"EconomyAPI","version":"5.7.3-PM4","mainCategory":8,"state":5,"created":1640089158,"project":{"repo":{"owner":"poggit-orphanage","name":"EconomyS"},"path":"EconomyAPI/","name":"EconomyAPI"},"build":{"buildId":118919,"internal":36,"sha":"98333a83f2f4648e07a50b9b0d5780dc02e6a5d6","tree":"tree/98333a83f2f4648e07a50b9b0d5780dc02e6a5d6/"},"rejectPath":"repos/poggit-orphanage/EconomyS/commits/98333a83f2f4648e07a50b9b0d5780dc02e6a5d6/comments","isMine":false,"myVote":0,"myVoteMessage":""};</script>
+      </head>
+      <body>
+            <div id="header" class="container-fluid">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top" role="navigation">
+          <div class="tabletlogo">
+            <div class="navbar-brand tm">
+              <a href="/">
+                <img class="logo" src="/res/poggit-icon.png"/>
+                Poggit
+                                </a></div>
+            <button class="navbar-toggler navbar-toggler-right mr-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+          </div>
+          <div id="navbarNavAltMarkup" class="navbar-right navbuttons collapse navbar-collapse">
+            <div class="navbar-middle">
+              <ul class="navbar-nav navbuttons collapse navbar-collapse">
+                <li class="nav-item navbutton" data-target="">Home</li>
+                <li class="nav-item navbutton" data-target="plugins">Releases</li>
+                <li class="nav-item navbutton" data-target="ci/recent">Dev</li>
+                                      <li class="nav-item navbutton" data-target="review">Review</li>
+                                  <li class="nav-item navbutton" data-target="faq">FAQ</li>
+                <!--                        <li class="nav-item navbutton extlink" data-target="https://poggit.github.io/support">Help</li>-->
+                <!-- TODO Finish the Help page, then add this back -->
+              </ul>
+            </div>
+            <ul class="navbar-nav">
+                                                        <li class="login-buttons">
+                      <span
+                          onclick='ajax("login.su", {data: {target: prompt("su")}, success: function() { window.location.reload(true); }})'><code>su</code></span>
+                    </li>
+                                      <li class="nav-item login-buttons">
+                    <span onclick='location = "\/settings";'>Settings</span>
+                  </li>
+                  <li class="nav-item login-buttons"><span onclick="logout()">Logout</span></li>
+                  <div><a target="_blank"
+                          href="https://github.com/JaxkDev?tab=repositories">
+                      <img width="20" height="20"
+                           src="https://github.com/JaxkDev.png" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/></a></div>
+                            </ul>
+          </div>
+        </nav>
+      </div>
+                      <div id="body">
+        <div class="release-top">
+                          <div class="release-edit">
+                        <span class="action-red"
+                              onclick="$('#wait-spinner').modal();location.href='/update/poggit-orphanage/EconomyS/EconomyAPI/36'">Edit Release</span>
+              </div>
+                      <div id="release-admin-marker"></div>
+                    </div>
+                  <div class="alert alert-danger">Note:
+	    EconomyAPI is no longer supported due to major performance issues. Please use other economy plugins such as BedrockEconomy or Capital instead.          </div>
+                <div class="plugin-heading">
+          <div class="plugin-title">
+            <h3>
+              <nobr>
+                  <a href="/ci/poggit-orphanage/EconomyS/EconomyAPI">
+                      EconomyAPI                  </a>
+                    <span class='release-flag release-flag-pre-release'
+            title='This is a pre-release.'></span><span class='release-flag release-flag-outdated'
+            title='This version only works on beta/old versions of PocketMine-MP (not compatible with 5.16.0).'></span><span class='release-flag release-flag-abandoned'
+            title='This plugin is abandoned and no longer maintained.'></span>                  <a href='https://github.com/poggit-orphanage/EconomyS/tree/98333a83f2f4648e07a50b9b0d5780dc02e6a5d6/EconomyAPI/' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a></nobr>
+            </h3>
+            <h4>by
+              <a href="/plugins/by/poggit-orphanage">poggit-orphanage</a>
+              <a href='https://github.com/poggit-orphanage' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>            </h4>
+          </div>
+          <div class="plugin-logo">
+                              <img src="https://raw.githubusercontent.com/poggit-orphanage/EconomyS/98333a83f2f4648e07a50b9b0d5780dc02e6a5d6/EconomyAPI/icon.png" height="64" onerror="this.src = '/res/defaultPluginIcon3.png'; this.onerror = null;"/>
+                        </div>
+          <div class="plugin-header-info">
+                              <div class="plugin-info">
+                  <h5>EconomyS by OneBone</h5>
+                                          <h6>version 5.7.3-PM4</h6>
+                      <span id="releaseState"
+                            class="plugin-state-5">Approved</span>
+                                                            </div>
+                        </div>
+        </div>
+                  <div class="plugin-top">
+          <div class="plugin-top-left">
+                          <div class="download-release">
+              <div class="release-download">
+                <a href="/r/153507/EconomyAPI.phar" class="btn btn-primary btn-md text-center" role="button">
+                        <span
+                            onclick='gaEventRelease(true, "EconomyAPI", "5.7.3-PM4"); window.location = "/r/153507/EconomyAPI.phar";'>
+                                Direct Download</span>
+                </a>
+                <span class="hover-title btn-warning"
+                      onclick="$('#how-to-install').dialog('open')">How to install?</span>
+              </div>
+              <div class="try-plugin"></div>
+              <div class="release-switch">
+                                      Switch version
+                    <select id="releaseVersionHistory"
+                            onchange='window.location = getRelativeRootPath() + "p/" + "EconomyAPI" + "/" + this.value;'>
+                      <option style="display:none" disabled selected value>Select a public release</option>
+                                                  <option value="5.7.3-PM4"
+                              selected>
+                              5.7.3-PM4                            (21 Dec 2021                            ) Approved                          </option>
+                                                  <option value="5.7.2"
+                              >
+                              5.7.2                            (21 Jun 2018                            ) Approved                          </option>
+                                                  <option value="5.7.1-6"
+                              >
+                              5.7.1-6                            (15 May 2018                            ) Approved                          </option>
+                                                  <option value="5.7.1-5"
+                              >
+                              5.7.1-5                            (11 Feb 2018                            ) Approved                          </option>
+                                                  <option value="5.7.1-4"
+                              >
+                              5.7.1-4                            (08 Dec 2017                            ) Approved                          </option>
+                                                  <option value="5.7.1-3"
+                              >
+                              5.7.1-3                            (09 Oct 2017                            ) Approved                          </option>
+                                                  <option value="5.7.1-2.alpha8"
+                              >
+                              5.7.1-2.alpha8                            (25 Sep 2017                            ) Approved                          </option>
+                                                  <option value="5.7.1-dev1"
+                              >
+                              5.7.1-dev1                            (29 Jun 2017                            ) Approved                          </option>
+                                                  <option value="5.7.1"
+                              >
+                              5.7.1                            (02 Apr 2017                            ) Approved                          </option>
+                                                  <option value="5.7"
+                              >
+                              5.7                            (13 Mar 2017                            ) Approved                          </option>
+                                                  <option value="5.0"
+                              >
+                              5.0                            (28 Feb 2017                            ) Approved                          </option>
+                                                  <option value="5.7d"
+                              >
+                              5.7d                            (01 Mar 2017                            ) Draft                          </option>
+                                                  <option value="5.7a"
+                              >
+                              5.7a                            (28 Feb 2017                            ) Draft                          </option>
+                                            </select>
+                                  <div class="release-stats">
+                                          <div>25341 Downloads / 176441                        Total
+                      </div>
+                                                              <div class="release-score">
+                        <div class="release-stars">
+                            <img
+                              src="/res/Full_Star_Yellow.svg"/><img
+                              src="/res/Full_Star_Yellow.svg"/><img
+                              src="/res/Full_Star_Yellow.svg"/><img
+                              src="/res/Full_Star_Yellow.svg"/><img
+                              src="/res/Full_Star_Yellow.svg"/>                        </div>
+                          66 Reviews                      </div>
+                                    </div>
+              </div>
+            </div>
+
+            <div id="how-to-install" style="display: none;" title="How to install plugins?">
+              <ol>
+                <li autofocus>Click the "Direct download" button. The plugin will be downloaded.</li>
+                <li>Copy the downloaded file to your server's <code>plugins</code> folder.</li>
+                <li>Run <code>stop</code> on your server, then start it again.</li>
+                <!-- TODO more newbie-friendly! -->
+              </ol>
+            </div>
+
+            <a name="review-anchor"></a>
+            <div class="release-build-link"><h6>
+                Submitted on 21 Dec 2021 from
+                <a href="/ci/poggit-orphanage/EconomyS/EconomyAPI/36">
+                  Dev Build #36</a>,
+                    Approved on
+                    21 Dec 2021              </h6></div>
+                        </div>
+        </div>
+        <div class="review-wrapper">
+          <div class="plugin-table">
+            <div class="plugin-prose">
+              <div class="plugin-info-description">
+                <div class="release-description-header">
+                  <div class="release-description">Plugin
+                    Description       <a class="dynamic-anchor" id="anchor-description" name="description" href="#description">&sect;</a>
+        </div>
+                                        <div>
+                      <a href="https://github.com/poggit-orphanage/EconomyS/issues"
+                        class="btn btn-secondary"
+                        role="button">
+                        Bugs
+                      </a>
+                    </div>
+                                                                      <div class="release-review-intent" data-score="1">
+                            <img src="/res/Empty_Star.svg" height="24"/>
+                          </div>
+                                                  <div class="release-review-intent" data-score="2">
+                            <img src="/res/Empty_Star.svg" height="24"/>
+                          </div>
+                                                  <div class="release-review-intent" data-score="3">
+                            <img src="/res/Empty_Star.svg" height="24"/>
+                          </div>
+                                                  <div class="release-review-intent" data-score="4">
+                            <img src="/res/Empty_Star.svg" height="24"/>
+                          </div>
+                                                  <div class="release-review-intent" data-score="5">
+                            <img src="/res/Empty_Star.svg" height="24"/>
+                          </div>
+                                                            </div>
+                <div class="plugin-info" id="rdesc" data-desc-type="html">
+                    <h2><a id="user-content-general" class="anchor" aria-hidden="true" href="#general"><span aria-hidden="true" class="octicon octicon-link"></span></a>General</h2>
+<p>A complete suite of Economy plugins by onebone:</p>
+<ul>
+<li>User oriented plugin</li>
+<li>EconomyAPI Individual language support</li>
+<li>Economy API support</li>
+<li>Direct accessible API</li>
+<li>Lots of configurations</li>
+<li>Lots of events to handle</li>
+<li>Fast processing with massive features</li>
+</ul>
+<p><strong>IMPORTANT: You MUST install EconomyAPI to use ANY of the EconomyS plugins</strong></p>
+<h2><a id="user-content-economys" class="anchor" aria-hidden="true" href="#economys"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyS</h2>
+<ol>
+<li>
+<p>EconomyAPI - Main of the €conom¥$ - All plugins below requires this plugin</p>
+</li>
+<li>
+<p>EconomyShop - Buy items</p>
+</li>
+<li>
+<p>EconomySell - Sell items</p>
+</li>
+<li>
+<p>EconomyAirport - Teleport by money</p>
+</li>
+<li>
+<p>EconomyJob - Provide job system into your server</p>
+</li>
+<li>
+<p>EconomyTax - Helps your server balancing money</p>
+</li>
+<li>
+<p>EconomyLand - Helps your server manage lands</p>
+</li>
+<li>
+<p>EconomyPShop - Shops for non-op players - requires ItemCloud plugin</p>
+</li>
+<li>
+<p>EconomyAuction - Open your auction!</p>
+</li>
+<li>
+<p>EconomyCasino - Do casino in your server!</p>
+</li>
+<li>
+<p>EconomyProperty - Buy your land with signs - requires EconomyLand</p>
+</li>
+<li>
+<p>EconomyUsury - Create your usury host and take a loan from host</p>
+</li>
+</ol>
+<h2><a id="user-content-economyapi" class="anchor" aria-hidden="true" href="#economyapi"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyAPI</h2>
+<h3><a id="user-content-commands" class="anchor" aria-hidden="true" href="#commands"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Default command</th>
+<th align="center">Parameter</th>
+<th align="center">Description</th>
+<th align="center">Default Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">/mymoney</td>
+<td align="center"></td>
+<td align="center">Shows your money</td>
+<td align="center">All</td>
+</tr>
+<tr>
+<td align="center">/mydebt</td>
+<td align="center"></td>
+<td align="center">Shows your debt</td>
+<td align="center">All</td>
+</tr>
+<tr>
+<td align="center">/takedebt</td>
+<td align="center"><code>&lt;money&gt;</code></td>
+<td align="center">Borrows $<code>&lt;money&gt;</code> from plugin</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/returndebt</td>
+<td align="center"><code>&lt;money&gt;</code></td>
+<td align="center">Returns $<code>&lt;money&gt;</code> to plugin</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/topmoney</td>
+<td align="center"><code>&lt;page&gt;</code></td>
+<td align="center">Shows server's top money</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/moneysave</td>
+<td align="center"></td>
+<td align="center">Saves data to your hardware</td>
+<td align="center"><code>Console</code></td>
+</tr>
+<tr>
+<td align="center">/moneyload</td>
+<td align="center"></td>
+<td align="center">Loads data from your hardware</td>
+<td align="center"><code>Console</code></td>
+</tr>
+<tr>
+<td align="center">/setmoney</td>
+<td align="center">
+<code>&lt;player&gt;</code> <code>&lt;money&gt;</code>
+</td>
+<td align="center">Sets <code>&lt;player&gt;</code>'s money to $<code>&lt;money&gt;</code>
+</td>
+<td align="center">
+<code>OP</code> <code>Console</code>
+</td>
+</tr>
+<tr>
+<td align="center">/economys</td>
+<td align="center"></td>
+<td align="center">Shows plugin which are using EconomyAPI</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/givemoney</td>
+<td align="center">
+<code>&lt;player&gt;</code> <code>&lt;money&gt;</code>
+</td>
+<td align="center">Gives $<code>&lt;money&gt;</code> <code>&lt;player&gt;</code>
+</td>
+<td align="center">
+<code>OP</code> <code>Console</code>
+</td>
+</tr>
+<tr>
+<td align="center">/takemoney</td>
+<td align="center">
+<code>&lt;player&gt;</code> <code>&lt;money&gt;</code>
+</td>
+<td align="center">Takes $<code>&lt;money&gt;</code> from <code>&lt;player&gt;</code>
+</td>
+<td align="center">
+<code>OP</code> <code>Console</code>
+</td>
+</tr>
+<tr>
+<td align="center">/seemoney</td>
+<td align="center"><code>&lt;player&gt;</code></td>
+<td align="center">Shows <code>&lt;player&gt;</code>'s money</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/bank deposit</td>
+<td align="center"><code>&lt;money&gt;</code></td>
+<td align="center">Deposit $<code>&lt;money&gt;</code> to your account</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/bank withdraw</td>
+<td align="center"><code>&lt;money&gt;</code></td>
+<td align="center">Withdraw $<code>&lt;money&gt;</code> from your account</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/bank mymoney</td>
+<td align="center"></td>
+<td align="center">Shows your money from your account</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/mystatus</td>
+<td align="center"></td>
+<td align="center">Shows your money status</td>
+<td align="center"><code>All</code></td>
+</tr>
+<tr>
+<td align="center">/bankadmin takemoney</td>
+<td align="center">
+<code>&lt;player&gt;</code> <code>&lt;money&gt;</code>
+</td>
+<td align="center">Takes $<code>&lt;money&gt;</code> from <code>&lt;player&gt;</code>'s account</td>
+<td align="center">
+<code>OP</code> <code>Console</code>
+</td>
+</tr>
+<tr>
+<td align="center">/bankadmin givemoney</td>
+<td align="center">
+<code>&lt;player&gt;</code> <code>&lt;money&gt;</code>
+</td>
+<td align="center">Gives $<code>&lt;money&gt;</code> for <code>&lt;player&gt;</code>'s account</td>
+<td align="center">
+<code>OP</code> <code>Console</code>
+</td>
+</tr>
+</tbody>
+</table>
+<h3><a id="user-content-configuration" class="anchor" aria-hidden="true" href="#configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+<blockquote>
+<p>File : <code>plugins/EconomyAPI/economy.properties</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">Description</th>
+<th align="center">Available Value</th>
+<th align="center">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">show-using-economy</td>
+<td align="center">Changes server name to <code>[EconomyS] SERVER NAME</code>   <code>on : Change</code> <code>off : Don't change</code>
+</td>
+<td align="center">
+<code>on</code> <code>off</code>
+</td>
+<td align="center">on</td>
+</tr>
+<tr>
+<td align="center">once-debt-limit</td>
+<td align="center">Limits borrowing debt at once</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">100</td>
+</tr>
+<tr>
+<td align="center">debt-limit</td>
+<td align="center">Limits available debt</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">500</td>
+</tr>
+<tr>
+<td align="center">add-op-at-rank</td>
+<td align="center">Shows OP at top money rank    <code>on : Shows OP</code> <code>off : Don't shows OP</code>
+</td>
+<td align="center">
+<code>on</code> <code>off</code>
+</td>
+<td align="center">off</td>
+</tr>
+<tr>
+<td align="center">default-money</td>
+<td align="center">Sets default money</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">1000</td>
+</tr>
+<tr>
+<td align="center">default-debt</td>
+<td align="center">Sets default debt</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">time-for-increase-debt</td>
+<td align="center">Sets how long will take for debt increase</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">percent-of-increase-debt</td>
+<td align="center">Sets percentage of increasing debt</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">default-bank-money</td>
+<td align="center">Sets default bank money</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">time-for-increase-money</td>
+<td align="center">Sets how long will take for credit increase</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">bank-increase=money-rate</td>
+<td align="center">Sets percentage of increasing credit</td>
+<td align="center"><code>All integers</code></td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">debug</td>
+<td align="center">Money debugging preferences  <code>on : yes</code> <code>off : no</code>
+</td>
+<td align="center">
+<code>on</code> <code>off</code>
+</td>
+<td align="center">on</td>
+</tr>
+</tbody>
+</table>
+<h2><a id="user-content-economyland" class="anchor" aria-hidden="true" href="#economyland"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyLand</h2>
+<p>EconomyLand provides your players a land protection system. If the player buys land, the land will protected for the bought player.</p>
+<h3><a id="user-content-commands-1" class="anchor" aria-hidden="true" href="#commands-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h3>
+<p>List of commands :</p>
+<p><code>/land &lt;list | here | move | invite | invitee | give | buy | whose&gt;</code></p>
+<p><code>/landsell &lt;here | land number&gt;</code></p>
+<p>Instructions for /land command :</p>
+<p><code>/startp</code> : Sets the start position.</p>
+<p><code>/endp</code> : Sets the end position.</p>
+<p><code>/land list [page]</code> : Shows the list of land.</p>
+<p><code>/land here</code> : Shows the land where you are standing on.</p>
+<p><code>/land move &lt;land id&gt;</code> : Move to land.</p>
+<p><code>/land invite &lt;land id&gt; &lt;invitee&gt;</code> : Invites player to your land.</p>
+<p><code>/land invitee &lt;land id&gt;</code> : Shows the list of invitee in land.</p>
+<p><code>/land give &lt;land id&gt; &lt;player&gt;</code> : Give the land to other player.</p>
+<p><code>/land buy</code> : Buys land.</p>
+<p><code>/land whose &lt;keyword&gt;</code> : Queries the list of land-bought players.</p>
+<p><code>/landsell here</code> : Sells land where you're standing on.</p>
+<p><code>/landsell &lt;land id&gt;</code> : Sells land by land ID.</p>
+<p>If you use <code>/startp</code> and <code>/endp</code> commands you'll set the position where you'll buy. Then, you can use <code>/land buy</code> command to buy the land.</p>
+<p>The <code>land id</code> is the land ID that shows in <code>/land list</code> command.</p>
+<p>EconomyLand will ignore Y axis. It will protect all of Y axis which is in area.</p>
+<h3><a id="user-content-permissions" class="anchor" aria-hidden="true" href="#permissions"><span aria-hidden="true" class="octicon octicon-link"></span></a>Permissions</h3>
+<pre><code>economyland.*
+economyland.land.*
+economyland.land.modify.others
+economyland.land.modify.whiteland
+economyland.land.modify.others
+economyland.landsell.*
+economyland.landsell.others
+economyland.command.*
+economyland.command.startp
+economyland.command.endp
+economyland.command.land.buy
+economyland.command.land.move
+economyland.command.land.list
+economyland.command.land.whose
+economyland.command.land.give
+economyland.command.land.here
+economyland.command.landsell
+economyland.command.landsell.here
+economyland.command.landsell.number
+</code></pre>
+<h2><a id="user-content-economyshop" class="anchor" aria-hidden="true" href="#economyshop"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyShop</h2>
+<h3><a id="user-content-commands-2" class="anchor" aria-hidden="true" href="#commands-2"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h3>
+<p><code>/shop create &lt;create|remove|list&gt; [item[:damage]] [amount] [price] [side]</code> - Tap to activate SHOP signs | <code>OP</code> |</p>
+<p>Shop are created with <code>/shop</code> then tapping any block to activate it.
+For example to make a shop selling a Diamond Sword for 500$:</p>
+<p><code>/shop create 276 1 500</code> then tap a block/sign.</p>
+<p><code>Sell Center</code> in <code>EconomySell</code> can be created in same way with <code>/sell create 276 1 500</code>. And also <code>Player's Shop</code> in <code>EconomyPShop</code></p>
+<h3><a id="user-content-configuration-1" class="anchor" aria-hidden="true" href="#configuration-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h3>
+<blockquote>
+<p>File : <code>plugins/EconomyShop/shop.properties</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">Description</th>
+<th align="center">Available Value</th>
+<th align="center">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">handler-priority</td>
+<td align="center">The priority of handling shop touches</td>
+<td align="center">Integer</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
+<h2><a id="user-content-economypshop" class="anchor" aria-hidden="true" href="#economypshop"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyPShop</h2>
+<p>EconomyPShop is the system that lets non-OP players to open their own shop.</p>
+<p><strong>Important: EconomyPShop requires ItemCloud</strong></p>
+<p>First, you have to register and upload your item. Then, you'll create the PShop (Player shop).
+Second, other players will tap your pshop sign/block <strong>twice</strong> to buy your item. Then, your item in ItemCloud will be removed.</p>
+<h3><a id="user-content-commands-3" class="anchor" aria-hidden="true" href="#commands-3"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h3>
+<p><code>/pshop create &lt;create|remove|list&gt; [item[:damage]] [amount] [price] [side]</code> - Tap to activate SHOP signs | <code>OP</code> |</p>
+<h2><a id="user-content-economyjob" class="anchor" aria-hidden="true" href="#economyjob"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyJob</h2>
+<h5><a id="user-content-instructions-for-jobsyml-configuration" class="anchor" aria-hidden="true" href="#instructions-for-jobsyml-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instructions for jobs.yml configuration</h5>
+<pre><code>tree-cutter:
+"17:0:break": 10
+</code></pre>
+<p>This is one of the config items in jobs.yml.</p>
+<p>'tree-cutter' is name of the job,</p>
+<p>In <code>"17:0:break"</code> - 17 is item code, 0 is damage of item, break is the method and the 10 on the far right side is the money earned.</p>
+<p>So</p>
+<p><code>"18:0:place": 10</code></p>
+<p>Means : If I place a block with ID 18 and damage 0 I will earn $10.</p>
+<h5><a id="user-content-instructions-for-configyml-configuration" class="anchor" aria-hidden="true" href="#instructions-for-configyml-configuration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instructions for config.yml configuration</h5>
+<p><code>refresh-time:</code> The time of changing price of item, Integer</p>
+<p><code>broadcast-refresh:</code> Whether to broadcast the item has refreshed the price, true/false</p>
+<p><code>max-change-rate:</code> The maximum rate of changing money, Integer</p>
+<h5><a id="user-content-permissions-1" class="anchor" aria-hidden="true" href="#permissions-1"><span aria-hidden="true" class="octicon octicon-link"></span></a>Permissions</h5>
+<pre><code>economyjob.command.*
+economyjob.command.job.join
+economyjob.command.job.reture
+economyjob.command.job.list
+economyjob.command.job.me
+</code></pre>
+<h2><a id="user-content-economyairport" class="anchor" aria-hidden="true" href="#economyairport"><span aria-hidden="true" class="octicon octicon-link"></span></a>EconomyAirport</h2>
+<blockquote>
+<p>File : <code>%CONFIG_PATH%/DepartureSign.yml</code>
+File : <code>%CONFIG_PATH%/ArrivalSign.yml</code>
+File : <code>%CONFIG_PATH%/Identifier.yml</code></p>
+</blockquote>
+<p>This documentation is focused on default configuration.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Line1</th>
+<th align="center">Line2</th>
+<th align="center">Line3</th>
+<th align="center">Line4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">`&lt;international</td>
+<td align="center">airport&gt;`</td>
+<td align="center">`&lt;arrival</td>
+<td align="center">departure&gt;`</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>Line1: airport
+Line2: departure
+Line3: 10
+Line4: onebone</p>
+<p>Takes $10 to go to <code>onebone</code> airport</p>
+<p>Line1: airport
+Line2: arrival
+Line3: onebone
+Line4:</p>
+<p>Arrival sign : <code>onebone</code> airport</p>
+<p>If there's no target airport to fly, it aborts riding a flight.</p>
+<h2><a id="user-content-for-developers" class="anchor" aria-hidden="true" href="#for-developers"><span aria-hidden="true" class="octicon octicon-link"></span></a>For Developers</h2>
+<p>You can access to EconomyAPI by using <code>EconomyAPI::getInstance()</code></p>
+<p>Example:</p>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-v">EconomyAPI</span>::<span class="pl-en">getInstance</span>()-&gt;<span class="pl-en">addMoney</span>(<span class="pl-s1"><span class="pl-c1">$</span>player</span>, <span class="pl-s1"><span class="pl-c1">$</span>amount</span>);</pre></div>
+                </div>
+              </div>
+                                  <div class="plugin-info-changelog">
+                    <div class="form-key">What's new       <a class="dynamic-anchor" id="anchor-changelog" name="changelog" href="#changelog">&sect;</a>
+        </div>
+                    <div class="plugin-info" id="rchlog">
+                      <ul>
+                                                      <li >
+                              <a href="#changelog-version-5.7.3-PM4">5.7.3-PM4</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.2">5.7.2</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1-6">5.7.1-6</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1-5">5.7.1-5</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1-4">5.7.1-4</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1-3">5.7.1-3</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1-2.alpha8">5.7.1-2.alpha8</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1-dev1">5.7.1-dev1</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7.1">5.7.1</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.7">5.7</a></li>
+                                                      <li >
+                              <a href="#changelog-version-5.0">5.0</a></li>
+                                                </ul>
+                                                  <div id="changelog-version-5.7.3-PM4">
+                              <ul dir="auto">
+<li>Added support for PM4
+<ul dir="auto">
+<li>(tested)</li>
+</ul>
+</li>
+<li>added command issuer (<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="597580385" data-permission-text="Title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/59" data-hovercard-type="pull_request" data-hovercard-url="/poggit-orphanage/EconomyS/pull/59/hovercard" href="https://github.com/poggit-orphanage/EconomyS/pull/59">#59</a>)</li>
+<li>added oldmoney (<a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="597579887" data-permission-text="Title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/58" data-hovercard-type="pull_request" data-hovercard-url="/poggit-orphanage/EconomyS/pull/58/hovercard" href="https://github.com/poggit-orphanage/EconomyS/pull/58">#58</a>)</li>
+<li>Portuguese lang</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.2">
+                              <ul>
+<li>Untested updates for Scheduler nuke #2213 (9644766df3c69)</li>
+<li>Update Task</li>
+<li>Updated for PMMP PocketMine 3.0.0</li>
+<li>update</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.1-6">
+                              <ul>
+<li>API version bump, untested</li>
+<li>Bumped version</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.1-5">
+                              <ul>
+<li>Updated for 3.0.0-ALPHA11, version bump</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.1-4">
+                              <ul>
+<li>API version Bump</li>
+<li>Bumped version</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.1-3">
+                              <ul>
+<li>Version bump for 3.0.0-ALPHA9</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.1-2.alpha8">
+                              <ul>
+<li>Add Ukrainian translation</li>
+<li>Add Ukrainian translation <a href="https://github.com/poggit-orphanage/EconomyS/pull/2" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="247047965" data-permission-text="Issue title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/2">#2</a> (my bad...)</li>
+<li>Bugfix (<a href="https://github.com/poggit-orphanage/EconomyS/pull/7" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="248678168" data-permission-text="Issue title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/7">#7</a>)
+<ul>
+<li>
+<ul>
+<li>Update MySQLPingTask.php</li>
+</ul>
+</li>
+<li></li>
+<li>
+<ul>
+<li>Update SaveTask.php</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Fixes for ALPHA7</li>
+<li>Forgot this</li>
+<li>Merge onebone master</li>
+<li>Merge pull request <a href="https://github.com/poggit-orphanage/EconomyS/pull/2" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="247047965" data-permission-text="Issue title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/2">#2</a> from samalero/patch-1
+<ul>
+<li>Added Ukrainian translation</li>
+</ul>
+</li>
+<li>Merge pull request <a href="https://github.com/poggit-orphanage/EconomyS/pull/3" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="247049430" data-permission-text="Issue title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/3">#3</a> from samalero/patch-2
+<ul>
+<li>Added Ukrainian translation <a href="https://github.com/poggit-orphanage/EconomyS/pull/2" class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="247047965" data-permission-text="Issue title is private" data-url="https://github.com/poggit-orphanage/EconomyS/issues/2">#2</a> (my bad...)</li>
+</ul>
+</li>
+<li>PLEASE STOP CHANGING API
+<ul>
+<li><a href="https://stackoverflow.com/questions/3580628/is-type-hinting-helping-the-performance-of-php-scripts">https://stackoverflow.com/questions/3580628/is-type-hinting-helping-the-performance-of-php-scripts</a></li>
+<li>Please stop making changes that I have to make these unnecessary changes...</li>
+<li>It is better to create PHP Doc</li>
+</ul>
+</li>
+<li>Updated entity code, bugfix</li>
+<li>Updated for API version 3.0.0-ALPHA7. Breaks BC</li>
+<li>tested with 3.0.0-ALPHA8</li>
+<li>부분적인 하위 호환 패치 ^^
+<ul>
+<li><a href="https://stackoverflow.com/questions/3580628/is-type-hinting-helping-the-performance-of-php-scripts">https://stackoverflow.com/questions/3580628/is-type-hinting-helping-the-performance-of-php-scripts</a></li>
+<li>More code, no advantage.</li>
+<li>And bonuses are more execution time and backwards incompatibility.</li>
+<li>Too great improvement <a href="https://github.com/dktapps" class="user-mention">@dktapps</a> !!! Keep up your nice work!!!</li>
+</ul>
+</li>
+</ul>                          </div>
+                                                  <div id="changelog-version-5.7.1-dev1">
+                              <p>Working with API 3.0.0-ALPHA6</p>
+                          </div>
+                                                  <div id="changelog-version-5.7.1">
+                              <p>Fixed /topmoney, API 3.0.0-ALPHA5</p>                          </div>
+                                                  <div id="changelog-version-5.7">
+                              <p>Fixed /topmoney</p>                          </div>
+                                                  <div id="changelog-version-5.0">
+                              <p>Fixed Icon, Bumped API to ALPHA4</p>                          </div>
+                                            </div>
+                  </div>
+                                      <script>var knownReviews = {"12664":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":12664,"authorName":"GabBiswajit","created":1697077737,"type":2,"score":5,"criteria":0,"message":"Rip \u2620\ufe0f Miss You EconomyAPI But Now Time For Bedrockeconomy!!","replies":[]},"12608":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":12608,"authorName":"SergeKrivelevich","created":1694443522,"type":2,"score":4,"criteria":0,"message":"WHERE IS PERMISSIONS?! ","replies":{"JaxkDev":{"reviewId":12608,"authorName":"JaxkDev","message":"Read the big red banner.\n\nNote: EconomyAPI is no longer supported due to major performance issues. Please use other economy plugins such as BedrockEconomy or Capital instead.","created":1694443556}}},"12250":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":12250,"authorName":"Nathmine24","created":1684837442,"type":2,"score":2,"criteria":0,"message":"Please put the plugin back in service please","replies":{"JaxkDev":{"reviewId":12250,"authorName":"JaxkDev","message":"Read the big red banner,\n\nNote: EconomyAPI is no longer supported due to major performance issues. Please use other economy plugins such as BedrockEconomy or Capital instead.","created":1694443572}}},"12094":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":12094,"authorName":"SudoDown","created":1672947664,"type":2,"score":5,"criteria":0,"message":"W","replies":[]},"11941":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":11941,"authorName":"note3crafter","created":1663527130,"type":2,"score":5,"criteria":0,"message":"EconomyAPI is the best Plugin for Economy","replies":[]},"11508":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":11508,"authorName":"MCPEAbdu77","created":1653935629,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"11359":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":11359,"authorName":"LNFepeez","created":1652279736,"type":2,"score":5,"criteria":0,"message":"I really like this plugin, but what is the text we have to had for the scorehud plugin.","replies":[]},"10764":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":10764,"authorName":"DPG896","created":1646176410,"type":2,"score":5,"criteria":0,"message":"rip ecoapi, you will be missed","replies":[]},"10721":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":10721,"authorName":"QueenMedusa404","created":1645888417,"type":2,"score":4,"criteria":0,"message":"Very good plugin....pliss update economy sell","replies":[]},"10529":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":10529,"authorName":"HashimTheArab","created":1645169142,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"10408":{"releaseRepoId":82867467,"releaseId":8365,"releaseName":"EconomyAPI","releaseVersion":"5.7.3-PM4","reviewId":10408,"authorName":"creeperplayer20","created":1644075445,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"10848":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":10848,"authorName":"ZexxBR","created":1646727791,"type":2,"score":2,"criteria":0,"message":"Up PM4!","replies":[]},"10161":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":10161,"authorName":"SrathYT","created":1639638507,"type":2,"score":5,"criteria":0,"message":"Bro Make Can Use Command_block plss bro :)","replies":[]},"9071":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":9071,"authorName":"BishalGamer","created":1628191243,"type":2,"score":5,"criteria":0,"message":"Good Plugin And Are You Free To Talk To Me In Discord My Discord is BishalGamer#2340","replies":[]},"8867":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":8867,"authorName":"SkullyGaming","created":1626892001,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"8644":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":8644,"authorName":"Firebros1","created":1624648628,"type":2,"score":5,"criteria":0,"message":"100% love this plug-in. Would recommend this to anyone who plans on having currency in their server.","replies":[]},"8529":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":8529,"authorName":"GabriMode","created":1623176726,"type":2,"score":5,"criteria":0,"message":"Excellent plugin, the best of all\nEasy to use and has no bugs.","replies":[]},"8396":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":8396,"authorName":"NoNeim1","created":1621812122,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"8210":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":8210,"authorName":"JavierLeon9966","created":1619457418,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"8194":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":8194,"authorName":"ZenZoya-coder","created":1619353267,"type":2,"score":5,"criteria":0,"message":"GOOD\n","replies":[]},"7809":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":7809,"authorName":"FlaredMokoMC","created":1614920631,"type":2,"score":5,"criteria":0,"message":"I love this plugin but it's say Could not load plugin Economy API what should I do? Pls help","replies":[]},"7789":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":7789,"authorName":"YazdanPlug","created":1614423294,"type":2,"score":3,"criteria":0,"message":"if i using topmoney plugin in console , server is shutdown","replies":[]},"4513":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":4513,"authorName":"xmrfr","created":1600496514,"type":2,"score":5,"criteria":0,"message":"a bit outdated but still working perfectly","replies":[]},"4479":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":4479,"authorName":"BANKRTDV","created":1599876773,"type":2,"score":5,"criteria":0,"message":"good","replies":[]},"4404":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":4404,"authorName":"karizmahh","created":1599009072,"type":2,"score":0,"criteria":0,"message":"","replies":[]},"4161":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":4161,"authorName":"JohnnyX071","created":1596876757,"type":2,"score":4,"criteria":0,"message":"Good plugin but please add multi echonomy and it will be amazing!","replies":[]},"4009":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":4009,"authorName":"jsonfromstatefarm","created":1595799109,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"3931":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":3931,"authorName":"XGamesSim","created":1595165874,"type":2,"score":5,"criteria":0,"message":"TOP plugin\n","replies":[]},"3678":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":3678,"authorName":"TowerFallGaming","created":1593450410,"type":2,"score":5,"criteria":0,"message":"Best economy by far","replies":[]},"3595":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":3595,"authorName":"ExetreemPlayz","created":1592499370,"type":2,"score":4,"criteria":0,"message":"[21:55:28] [Server thread/ERROR]: Could not load plugin 'EconomyShop': Incompatible network protocol version (plugin requires one of: 361)","replies":[]},"3548":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":3548,"authorName":"OxXFlaminXxO835","created":1592209695,"type":2,"score":4,"criteria":0,"message":"Great plugin, but the other economy plugin's doesn't work for me. Please update them or help me.","replies":[]},"3297":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":3297,"authorName":"JJBirdmanYT","created":1589553392,"type":2,"score":4,"criteria":0,"message":"Great plugin! Would really love if you could add per world money or option to have per world money that would be great!","replies":[]},"3195":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":3195,"authorName":"boredphoton","created":1588697506,"type":2,"score":1,"criteria":0,"message":"This plugin is full of SQL injection vulnerabilities. Who decided to revive this plugin and retain all the original crap code?","replies":[]},"2824":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2824,"authorName":"Worst-Admin","created":1585049953,"type":2,"score":5,"criteria":0,"message":"Where do I download the other plugins?","replies":[]},"2726":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2726,"authorName":"Deutscher2302","created":1583689952,"type":2,"score":5,"criteria":0,"message":"This Plugin is Perfect ","replies":[]},"2723":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2723,"authorName":"mrpwes","created":1583631746,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"2691":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2691,"authorName":"OrBuilder","created":1583092602,"type":2,"score":5,"criteria":0,"message":"","replies":[]},"2658":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2658,"authorName":"BobbyTowers","created":1582661291,"type":2,"score":5,"criteria":0,"message":"Works perfectly. Mandatory plugin.","replies":[]},"2551":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2551,"authorName":"Johnsonk79","created":1580960095,"type":2,"score":5,"criteria":0,"message":"awesome","replies":[]},"2357":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2357,"authorName":"creeperplayer20","created":1578042757,"type":2,"score":5,"criteria":0,"message":"Nice! ","replies":[]},"2172":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2172,"authorName":"DramaLvl1","created":1571304632,"type":2,"score":4,"criteria":0,"message":"This plugin is nice but pls add /pay *","replies":[]},"2049":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":2049,"authorName":"Minecraftfan714","created":1568055740,"type":2,"score":5,"criteria":0,"message":"love that plugin... ..but please add /pay *\nor /givemoney *","replies":[]},"1902":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1902,"authorName":"badrraad","created":1565130424,"type":2,"score":5,"criteria":0,"message":"Very good","replies":[]},"1695":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1695,"authorName":"explodersname","created":1562088826,"type":2,"score":5,"criteria":0,"message":"Great Plugin Family! I recommend a /pay command so players can pay other players.","replies":[]},"1652":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1652,"authorName":"JesusDesmadres","created":1560912560,"type":2,"score":4,"criteria":0,"message":"very good plugin but in EconomyShop and EconomySell when I make a store out the objects can not be grabbed but annoying that they leave, after a while they disappear, but whenever the server is updated the objects come back out.\nplease return the EconomyAu","replies":[]},"1582":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1582,"authorName":"Steellg0ldEstFrancais","created":1559205914,"type":2,"score":5,"criteria":0,"message":"Ok.","replies":[]},"1474":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1474,"authorName":"Itzdvbravo","created":1556550387,"type":2,"score":3,"criteria":0,"message":"How do a normal player pays to another player? like A players(this player will be A) has 500$ and he pay 250$ t someone(this will be b) and then the player hes paying gets the money the player a now has 250$ left","replies":[]},"1434":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1434,"authorName":"ZZWILLIAMXXTrue","created":1556168288,"type":2,"score":5,"criteria":0,"message":"Very good","replies":[]},"1370":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1370,"authorName":"mikeygio10","created":1555174907,"type":2,"score":5,"criteria":0,"message":"wowosooswo","replies":[]},"1178":{"releaseRepoId":82867467,"releaseId":1565,"releaseName":"EconomyAPI","releaseVersion":"5.7.2","reviewId":1178,"authorName":"Bruth78","created":1550856052,"type":2,"score":5,"criteria":0,"message":"Perfect.","replies":[]}};</script>
+                  <hr>
+          <div class="review-panel">
+                    <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="GabBiswajit" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/GabBiswajit.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/GabBiswajit" target="_blank">
+                <div class="review-author-name">GabBiswajit</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">12 Oct 23</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="12664">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="12664">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Rip ☠️ Miss You EconomyAPI But Now Time For Bedrockeconomy!!</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="SergeKrivelevich" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/SergeKrivelevich.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/SergeKrivelevich" target="_blank">
+                <div class="review-author-name">SergeKrivelevich</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">11 Sep 23</div>
+            </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="12608">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">WHERE IS PERMISSIONS?! </span>
+            </div>
+                  <div class="review-replies">
+                          <div class="review-reply">
+                <div class="review-header">
+                  <!-- TODO change these to reply-specific classes -->
+                  <div class="review-details">
+                    <img src="https://github.com/JaxkDev.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                    <a href="https://github.com/JaxkDev" target="_blank">
+                      <div class="reply-author-name">JaxkDev</div>
+                    </a>
+                                              <span class="badge badge-success">Staff</span>
+                                          <div class="review-date">11 Sep 23</div>
+                  </div>
+                                          <div class="edit-review-btn">
+                            <span class="action reply-review-dialog-trigger"
+                                  data-reviewId="12608">Edit</span>
+                      </div>
+                                    </div>
+              </div>
+              <div class="plugin-info">
+                <span class="review-textarea">Read the big red banner.
+
+Note: EconomyAPI is no longer supported due to major performance issues. Please use other economy plugins such as BedrockEconomy or Capital instead.</span>
+              </div>
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Nathmine24" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Nathmine24.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Nathmine24" target="_blank">
+                <div class="review-author-name">Nathmine24</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">23 May 23</div>
+            </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="12250">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Please put the plugin back in service please</span>
+            </div>
+                  <div class="review-replies">
+                          <div class="review-reply">
+                <div class="review-header">
+                  <!-- TODO change these to reply-specific classes -->
+                  <div class="review-details">
+                    <img src="https://github.com/JaxkDev.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                    <a href="https://github.com/JaxkDev" target="_blank">
+                      <div class="reply-author-name">JaxkDev</div>
+                    </a>
+                                              <span class="badge badge-success">Staff</span>
+                                          <div class="review-date">11 Sep 23</div>
+                  </div>
+                                          <div class="edit-review-btn">
+                            <span class="action reply-review-dialog-trigger"
+                                  data-reviewId="12250">Edit</span>
+                      </div>
+                                    </div>
+              </div>
+              <div class="plugin-info">
+                <span class="review-textarea">Read the big red banner,
+
+Note: EconomyAPI is no longer supported due to major performance issues. Please use other economy plugins such as BedrockEconomy or Capital instead.</span>
+              </div>
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="SudoDown" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/SudoDown.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/SudoDown" target="_blank">
+                <div class="review-author-name">SudoDown</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">05 Jan 23</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="12094">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="12094">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">W</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="note3crafter" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/note3crafter.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/note3crafter" target="_blank">
+                <div class="review-author-name">note3crafter</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">18 Sep 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="11941">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="11941">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">EconomyAPI is the best Plugin for Economy</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="MCPEAbdu77" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/MCPEAbdu77.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/MCPEAbdu77" target="_blank">
+                <div class="review-author-name">MCPEAbdu77</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">30 May 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="11508">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="11508">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="LNFepeez" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/LNFepeez.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/LNFepeez" target="_blank">
+                <div class="review-author-name">LNFepeez</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">11 May 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="11359">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="11359">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">I really like this plugin, but what is the text we have to had for the scorehud plugin.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="DPG896" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/DPG896.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/DPG896" target="_blank">
+                <div class="review-author-name">DPG896</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">01 Mar 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="10764">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="10764">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">rip ecoapi, you will be missed</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="QueenMedusa404" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/QueenMedusa404.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/QueenMedusa404" target="_blank">
+                <div class="review-author-name">QueenMedusa404</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">26 Feb 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="10721">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="10721">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Very good plugin....pliss update economy sell</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="HashimTheArab" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/HashimTheArab.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/HashimTheArab" target="_blank">
+                <div class="review-author-name">HashimTheArab</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">18 Feb 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="10529">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="10529">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="creeperplayer20" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/creeperplayer20.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/creeperplayer20" target="_blank">
+                <div class="review-author-name">creeperplayer20</div>
+              </a>
+                              <div class="review-version">using v5.7.3-PM4</div>
+              <div class="review-date">05 Feb 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="10408">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="8365" data-reviewId="10408">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="8365">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="ZexxBR" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/ZexxBR.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/ZexxBR" target="_blank">
+                <div class="review-author-name">ZexxBR</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">08 Mar 22</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="10848">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="10848">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Up PM4!</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="SrathYT" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/SrathYT.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/SrathYT" target="_blank">
+                <div class="review-author-name">SrathYT</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">16 Dec 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="10161">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="10161">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Bro Make Can Use Command_block plss bro :)</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="BishalGamer" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/BishalGamer.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/BishalGamer" target="_blank">
+                <div class="review-author-name">BishalGamer</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">05 Aug 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="9071">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="9071">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Good Plugin And Are You Free To Talk To Me In Discord My Discord is BishalGamer#2340</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="SkullyGaming" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/SkullyGaming.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/SkullyGaming" target="_blank">
+                <div class="review-author-name">SkullyGaming</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">21 Jul 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="8867">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="8867">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Firebros1" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Firebros1.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Firebros1" target="_blank">
+                <div class="review-author-name">Firebros1</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">25 Jun 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="8644">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="8644">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">100% love this plug-in. Would recommend this to anyone who plans on having currency in their server.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="GabriMode" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/GabriMode.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/GabriMode" target="_blank">
+                <div class="review-author-name">GabriMode</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">08 Jun 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="8529">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="8529">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Excellent plugin, the best of all
+Easy to use and has no bugs.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="NoNeim1" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/NoNeim1.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/NoNeim1" target="_blank">
+                <div class="review-author-name">NoNeim1</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">23 May 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="8396">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="8396">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="JavierLeon9966" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/JavierLeon9966.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/JavierLeon9966" target="_blank">
+                <div class="review-author-name">JavierLeon9966</div>
+              </a>
+                                  <span class="badge badge-success">Staff</span>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">26 Apr 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="8210">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="8210">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="ZenZoya-coder" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/ZenZoya-coder.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/ZenZoya-coder" target="_blank">
+                <div class="review-author-name">ZenZoya-coder</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">25 Apr 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="8194">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="8194">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">GOOD
+</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="FlaredMokoMC" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/FlaredMokoMC.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/FlaredMokoMC" target="_blank">
+                <div class="review-author-name">FlaredMokoMC</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">05 Mar 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="7809">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="7809">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">I love this plugin but it's say Could not load plugin Economy API what should I do? Pls help</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="YazdanPlug" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/YazdanPlug.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/YazdanPlug" target="_blank">
+                <div class="review-author-name">YazdanPlug</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">27 Feb 21</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="7789">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="7789">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">if i using topmoney plugin in console , server is shutdown</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="xmrfr" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/xmrfr.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/xmrfr" target="_blank">
+                <div class="review-author-name">xmrfr</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">19 Sep 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="4513">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="4513">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">a bit outdated but still working perfectly</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="BANKRTDV" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/BANKRTDV.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/BANKRTDV" target="_blank">
+                <div class="review-author-name">BANKRTDV</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">12 Sep 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="4479">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="4479">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">good</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="karizmahh" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/karizmahh.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/karizmahh" target="_blank">
+                <div class="review-author-name">karizmahh</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">02 Sep 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="4404">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="4404">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="JohnnyX071" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/JohnnyX071.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/JohnnyX071" target="_blank">
+                <div class="review-author-name">JohnnyX071</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">08 Aug 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="4161">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="4161">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Good plugin but please add multi echonomy and it will be amazing!</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="jsonfromstatefarm" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/jsonfromstatefarm.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/jsonfromstatefarm" target="_blank">
+                <div class="review-author-name">jsonfromstatefarm</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">26 Jul 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="4009">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="4009">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="XGamesSim" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/XGamesSim.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/XGamesSim" target="_blank">
+                <div class="review-author-name">XGamesSim</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">19 Jul 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="3931">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="3931">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">TOP plugin
+</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="TowerFallGaming" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/TowerFallGaming.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/TowerFallGaming" target="_blank">
+                <div class="review-author-name">TowerFallGaming</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">29 Jun 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="3678">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="3678">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Best economy by far</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="ExetreemPlayz" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/ExetreemPlayz.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/ExetreemPlayz" target="_blank">
+                <div class="review-author-name">ExetreemPlayz</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">18 Jun 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="3595">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="3595">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">[21:55:28] [Server thread/ERROR]: Could not load plugin 'EconomyShop': Incompatible network protocol version (plugin requires one of: 361)</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="OxXFlaminXxO835" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/OxXFlaminXxO835.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/OxXFlaminXxO835" target="_blank">
+                <div class="review-author-name">OxXFlaminXxO835</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">15 Jun 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="3548">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="3548">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Great plugin, but the other economy plugin's doesn't work for me. Please update them or help me.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="JJBirdmanYT" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/JJBirdmanYT.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/JJBirdmanYT" target="_blank">
+                <div class="review-author-name">JJBirdmanYT</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">15 May 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="3297">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="3297">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Great plugin! Would really love if you could add per world money or option to have per world money that would be great!</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="boredphoton" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/boredphoton.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/boredphoton" target="_blank">
+                <div class="review-author-name">boredphoton</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">05 May 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="3195">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="3195">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">This plugin is full of SQL injection vulnerabilities. Who decided to revive this plugin and retain all the original crap code?</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Worst-Admin" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Worst-Admin.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Worst-Admin" target="_blank">
+                <div class="review-author-name">Worst-Admin</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">24 Mar 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2824">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2824">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Where do I download the other plugins?</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Deutscher2302" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Deutscher2302.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Deutscher2302" target="_blank">
+                <div class="review-author-name">Deutscher2302</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">08 Mar 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2726">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2726">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">This Plugin is Perfect </span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="mrpwes" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/mrpwes.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/mrpwes" target="_blank">
+                <div class="review-author-name">mrpwes</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">08 Mar 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2723">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2723">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="OrBuilder" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/OrBuilder.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/OrBuilder" target="_blank">
+                <div class="review-author-name">OrBuilder</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">01 Mar 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2691">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2691">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="BobbyTowers" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/BobbyTowers.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/BobbyTowers" target="_blank">
+                <div class="review-author-name">BobbyTowers</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">25 Feb 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2658">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2658">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Works perfectly. Mandatory plugin.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Johnsonk79" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Johnsonk79.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Johnsonk79" target="_blank">
+                <div class="review-author-name">Johnsonk79</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">06 Feb 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2551">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2551">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">awesome</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="creeperplayer20" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/creeperplayer20.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/creeperplayer20" target="_blank">
+                <div class="review-author-name">creeperplayer20</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">03 Jan 20</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2357">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2357">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Nice! </span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="DramaLvl1" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/DramaLvl1.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/DramaLvl1" target="_blank">
+                <div class="review-author-name">DramaLvl1</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">17 Oct 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2172">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2172">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">This plugin is nice but pls add /pay *</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Minecraftfan714" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Minecraftfan714.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Minecraftfan714" target="_blank">
+                <div class="review-author-name">Minecraftfan714</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">09 Sep 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="2049">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="2049">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">love that plugin... ..but please add /pay *
+or /givemoney *</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="badrraad" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/badrraad.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/badrraad" target="_blank">
+                <div class="review-author-name">badrraad</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">06 Aug 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1902">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1902">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Very good</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="explodersname" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/explodersname.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/explodersname" target="_blank">
+                <div class="review-author-name">explodersname</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">02 Jul 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1695">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1695">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Great Plugin Family! I recommend a /pay command so players can pay other players.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="JesusDesmadres" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/JesusDesmadres.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/JesusDesmadres" target="_blank">
+                <div class="review-author-name">JesusDesmadres</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">19 Jun 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1652">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1652">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">very good plugin but in EconomyShop and EconomySell when I make a store out the objects can not be grabbed but annoying that they leave, after a while they disappear, but whenever the server is updated the objects come back out.
+please return the EconomyAu</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Steellg0ldEstFrancais" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Steellg0ldEstFrancais.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Steellg0ldEstFrancais" target="_blank">
+                <div class="review-author-name">Steellg0ldEstFrancais</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">30 May 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1582">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1582">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Ok.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Itzdvbravo" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Itzdvbravo.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Itzdvbravo" target="_blank">
+                <div class="review-author-name">Itzdvbravo</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">29 Apr 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1474">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1474">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Empty_Star.svg"/><img
+                src="/res/Empty_Star.svg"/>          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">How do a normal player pays to another player? like A players(this player will be A) has 500$ and he pay 250$ t someone(this will be b) and then the player hes paying gets the money the player a now has 250$ left</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="ZZWILLIAMXXTrue" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/ZZWILLIAMXXTrue.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/ZZWILLIAMXXTrue" target="_blank">
+                <div class="review-author-name">ZZWILLIAMXXTrue</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">25 Apr 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1434">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1434">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Very good</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="mikeygio10" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/mikeygio10.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/mikeygio10" target="_blank">
+                <div class="review-author-name">mikeygio10</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">13 Apr 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1370">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1370">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">wowosooswo</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div class="review-outer-wrapper">
+        <div class="review-author review-info-wrapper">
+                      <div id="reviewer" value="Bruth78" class="review-header">
+            <div class="review-details">
+              <img src="https://github.com/Bruth78.png" width="16" height="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+              <a href="https://github.com/Bruth78" target="_blank">
+                <div class="review-author-name">Bruth78</div>
+              </a>
+                                  <span class="badge badge-danger" style="cursor: help;" title="There have been updates to the plugin since this review was made.">Outdated</span>
+                              <div class="review-version">using v5.7.2</div>
+              <div class="review-date">22 Feb 19</div>
+            </div>
+                              <div class="review-reply-btn">
+                        <span class="action reply-review-dialog-trigger"
+                              data-reviewId="1178">Reply</span>
+                </div>
+                                            <div class="edit-review-btn">
+                  <span class="action edit-review-dialog-trigger" data-releaseId="1565" data-reviewId="1178">Edit</span>
+                </div>
+                <div class="action-red review-delete" criteria="0"
+                     onclick="deleteReview(this)"
+                     value="1565">x
+                </div>
+                        </div>
+        </div>
+        <div class="review-panel-left">
+          <div class="review-score review-info">
+              <img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" /><img
+                src="/res/Full_Star_Yellow.svg" />          </div>
+        </div>
+                      <div class="review-panel-right plugin-info">
+              <span class="review-textarea">Perfect.</span>
+            </div>
+                  <div class="review-replies">
+                    </div>
+      </div>
+              <div id="review-reply-dialog" data-forReview="0" title="Reply to Review">
+        <p>Reply to review by <span id="review-reply-dialog-author"></span>:</p>
+        <blockquote id="review-reply-dialog-quote"></blockquote>
+        <textarea id="review-reply-dialog-message"></textarea>
+      </div>
+      <div id="review-edit-dialog" data-forReview="0" data-forRelease="0" data-forAuthor="" title="Edit Review">
+        <form action="#">
+          <label for="score">Score</label>
+          <select name="score" id="score">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          / 5
+        </form>
+        <textarea id="review-edit-dialog-message" maxlength="1024"></textarea>
+      </div>
+                  </div>
+                    </div>
+            <div class="plugin-meta-info">
+                                  <div class="plugin-info-wrapper">
+                    <div class="form-key">Supported API versions</div>
+                    <div class="plugin-info">
+                      <div class="info-table" id="supportedSpoonsValue">
+                                                      <div class="api-list">
+                              <div class="submit-spoonVersion-from">4.0.0</div>
+                              <div>-></div>
+                              <div class="submit-spoonVersion-to">4.21.1</div>
+                            </div>
+                                                </div>
+                    </div>
+                  </div>
+                                                                                  <div class="plugin-info-wrapper" id="release-authors">
+                    <h5>Producers       <a class="dynamic-anchor" id="anchor-authors" name="authors" href="#authors">&sect;</a>
+        </h5>
+                                              <ul id="release-authors-main">
+                          <li class="release-authors-level">
+                              Collaborators:
+                            <ul class="plugin-info release-authors-sub">
+                                                                  <li class="release-authors-entry" data-name="onebone">
+                                    <img src="https://avatars1.githubusercontent.com/u/3233503"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @onebone <a href='https://github.com/onebone' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                            </ul>
+                          </li>
+                        </ul>
+                                              <ul id="release-authors-main">
+                          <li class="release-authors-level">
+                              Contributors:
+                            <ul class="plugin-info release-authors-sub">
+                                                                  <li class="release-authors-entry" data-name="Ad5001">
+                                    <img src="https://avatars1.githubusercontent.com/u/16436883"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Ad5001 <a href='https://github.com/Ad5001' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Awzaw">
+                                    <img src="https://avatars1.githubusercontent.com/u/10437212"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Awzaw <a href='https://github.com/Awzaw' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Bamuel">
+                                    <img src="https://avatars1.githubusercontent.com/u/6744113"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Bamuel <a href='https://github.com/Bamuel' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Cathesda-Server-Studios">
+                                    <img src="https://avatars1.githubusercontent.com/u/26445283"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Cathesda-Server-Studios <a href='https://github.com/Cathesda-Server-Studios' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Conankun17">
+                                    <img src="https://avatars1.githubusercontent.com/u/10703615"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Conankun17 <a href='https://github.com/Conankun17' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Creeperface01">
+                                    <img src="https://avatars1.githubusercontent.com/u/10363500"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Creeperface01 <a href='https://github.com/Creeperface01' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="HmHmmHm">
+                                    <img src="https://avatars1.githubusercontent.com/u/8337568"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @HmHmmHm <a href='https://github.com/HmHmmHm' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="MasterOfTheRealm">
+                                    <img src="https://avatars1.githubusercontent.com/u/24680179"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @MasterOfTheRealm <a href='https://github.com/MasterOfTheRealm' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="PJK12">
+                                    <img src="https://avatars1.githubusercontent.com/u/44998783"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @PJK12 <a href='https://github.com/PJK12' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="PJZ9n">
+                                    <img src="https://avatars1.githubusercontent.com/u/38120936"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @PJZ9n <a href='https://github.com/PJZ9n' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Pub4Game">
+                                    <img src="https://avatars1.githubusercontent.com/u/11244874"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Pub4Game <a href='https://github.com/Pub4Game' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="SOF3">
+                                    <img src="https://avatars1.githubusercontent.com/u/19623715"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @SOF3 <a href='https://github.com/SOF3' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="SleepSpace9">
+                                    <img src="https://avatars1.githubusercontent.com/u/15960628"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @SleepSpace9 <a href='https://github.com/SleepSpace9' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="Thunder33345">
+                                    <img src="https://avatars1.githubusercontent.com/u/9031498"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @Thunder33345 <a href='https://github.com/Thunder33345' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="chalkpe">
+                                    <img src="https://avatars1.githubusercontent.com/u/9481405"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @chalkpe <a href='https://github.com/chalkpe' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="dktapps">
+                                    <img src="https://avatars1.githubusercontent.com/u/14214667"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @dktapps <a href='https://github.com/dktapps' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="dog194">
+                                    <img src="https://avatars1.githubusercontent.com/u/10290499"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @dog194 <a href='https://github.com/dog194' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="edwinyoo44">
+                                    <img src="https://avatars1.githubusercontent.com/u/7691822"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @edwinyoo44 <a href='https://github.com/edwinyoo44' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="kairusds">
+                                    <img src="https://avatars1.githubusercontent.com/u/32636532"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @kairusds <a href='https://github.com/kairusds' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="kvetinac97">
+                                    <img src="https://avatars1.githubusercontent.com/u/10753543"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @kvetinac97 <a href='https://github.com/kvetinac97' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="laurobeleche">
+                                    <img src="https://avatars1.githubusercontent.com/u/14208219"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @laurobeleche <a href='https://github.com/laurobeleche' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="llronaldoll">
+                                    <img src="https://avatars1.githubusercontent.com/u/5334591"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @llronaldoll <a href='https://github.com/llronaldoll' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="luthfianto">
+                                    <img src="https://avatars1.githubusercontent.com/u/1331389"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @luthfianto <a href='https://github.com/luthfianto' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="nnnlog">
+                                    <img src="https://avatars1.githubusercontent.com/u/20399222"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @nnnlog <a href='https://github.com/nnnlog' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="shoghicp">
+                                    <img src="https://avatars1.githubusercontent.com/u/516482"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @shoghicp <a href='https://github.com/shoghicp' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="supercrafter333">
+                                    <img src="https://avatars1.githubusercontent.com/u/53967726"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @supercrafter333 <a href='https://github.com/supercrafter333' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                                  <li class="release-authors-entry" data-name="zKoz210">
+                                    <img src="https://avatars1.githubusercontent.com/u/28255085"
+                                         width="16" onerror="this.src='/res/ghMark.png'; this.onerror=null;"/>
+                                    @zKoz210 <a href='https://github.com/zKoz210' target='_blank' ><img class='gh-logo' src='/res/ghMark.png' width='16'/></a>                                  </li>
+                                                            </ul>
+                          </li>
+                        </ul>
+                                        </div>
+                              <div class="plugin-info-wrapper">
+                <div class="form-key">License       <a class="dynamic-anchor" id="anchor-license" name="license" href="#license">&sect;</a>
+        </div>
+                <div class="plugin-info">
+                                          <a target="_blank"
+                         href="https://spdx.org/licenses/GPL-3.0.html">GPL-3.0                      </a>
+                                    </div>
+              </div>
+              <div class="plugin-info-wrapper">
+                <div class="form-key">Categories:</div>
+                <div class="plugin-info main-category">Economy</div>
+                                      <div class="plugin-info">General</div>
+                                      <div class="plugin-info">Fun</div>
+                                      <div class="plugin-info">Miscellaneous</div>
+                                </div>
+                                  <div class="plugin-info-wrapper">
+                    <div class="form-key">Keywords</div>
+                    <div class="plugin-info">
+                      <ul class="plugin-keywords">
+                                                      <li><a href="/plugins?term=airport">
+                                    airport</a></li>
+                                                      <li><a href="/plugins?term=economy">
+                                    economy</a></li>
+                                                      <li><a href="/plugins?term=economyplus">
+                                    economyplus</a></li>
+                                                      <li><a href="/plugins?term=economyS">
+                                    economyS</a></li>
+                                                      <li><a href="/plugins?term=land">
+                                    land</a></li>
+                                                      <li><a href="/plugins?term=money">
+                                    money</a></li>
+                                                      <li><a href="/plugins?term=onebone">
+                                    onebone</a></li>
+                                                      <li><a href="/plugins?term=tax">
+                                    tax</a></li>
+                                                </ul>
+                    </div>
+                  </div>
+                                                  <div class="plugin-info-wrapper">
+                    <div class="form-key">Permissions</div>
+                    <div class="plugin-info">
+                      <div id="submit-perms" class="submit-perms-wrapper">
+                                                      <div>Permissions</div>
+                                                      <div>Commands</div>
+                                                      <div>Asynchronous tasks</div>
+                                                </div>
+                    </div>
+                  </div>
+                            </div>
+          </div>
+        </div>
+        <div class="bottom-download-link">
+                      <a href="/r/153507/EconomyAPI.phar" class="btn btn-primary btn-md text-center" role="button">
+                    <span
+                        onclick='gaEventRelease(false, "EconomyAPI", "5.7.3-PM4"); window.location = "/r/153507/EconomyAPI.phar";'>
+                        Direct Download</span>
+          </a>
+        </div>
+      </div>
+                  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div id="footer">
+        <ul class="footer-navbar">
+          <li>Powered by Poggit 1.0-beta                        </li>
+          <li id="online-user-count"></li>
+          <li>&copy; 2024 Poggit</li>
+          <span id="flat-cp">Some icons by www.freepik.com and <a href="https://icons8.com">Icon pack by Icons8</a></span>
+        </ul>
+        <ul class="footer-navbar">
+          <li><a href="/tos">Terms of Service</a></li>
+          <li><a target="_blank" href="https://discord.gg/XDugAkJ">Contact @ Discord</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit">Source Code</a></li>
+          <li><a target="_blank" href="https://github.com/poggit/poggit/issues">Bugs / Suggestions</a></li>
+          <li><a href="https://twitter.com/poggitci" class="twitter-follow-button" data-show-screen-name="false"
+                 data-show-count="true">Follow @poggitci</a></li>
+          <li><a href="#" onclick="$('html, body').animate({scrollTop: 0},500);">Back to Top</a></li>
+        </ul>
+      </div>
+                      <!-- REVIEW DIALOGUE -->
+        <div id="review-dialog" title="Review EconomyAPI">
+                      <form action="#">
+            <label for="votes">Score</label>
+            <select name="votes" id="votes">
+              <option>1</option>
+              <option>2</option>
+              <option selected>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            / 5
+          </form>
+          <form>
+            <textarea id="review-message" class="review-message" rows="3" cols="20" placeholder="Optional review text. Do not request updates here."
+                      maxlength="1024"></textarea>
+            <div><span id="review-warning"></span></div>
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px;">
+          </form>
+                          <form action="#">
+                <label for="review-criteria">Criteria</label>
+                <select name="review-criteria" id="review-criteria">
+                                          <option
+                          value="0" selected>General</option>
+                                          <option
+                          value="1" selected>Code</option>
+                                          <option
+                          value="2" selected>Performance</option>
+                                          <option
+                          value="3" selected>Usefulness</option>
+                                          <option
+                          value="4" selected>Concept</option>
+                                    </select>
+              </form>
+                    </div>
+                  <div id="release-description-bad-dialog" title="Failed to paginate plugin description." style="display: none;">
+        <p id="release-description-bad-reason"></p>
+      </div>
+      <div id="dialog-confirm" title="Delete this Release?" style="display: none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>This Release will
+          be permanently deleted and cannot be recovered. Are you sure?</p>
+      </div>
+      <div id="wait-spinner" class="loading">Loading...</div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="js/toggles.js"></script>
+            <script type="text/javascript" src="js/jquery.form.js"></script>
+            <script type="text/javascript" src="js/mobile.js"></script>
+            <script type="text/javascript" src="js/std.js"></script>
+            <script type="text/javascript" src="js/jquery.paginate.js"></script>
+            <script type="text/javascript" src="js/release.review.js"></script>
+            <script type="text/javascript" src="js/jquery.verticalTabs.js"></script>
+            <script type="text/javascript" src="js/release.details.js"></script>
+      </body>
+      </html>
+        
