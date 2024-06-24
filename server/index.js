@@ -14,6 +14,11 @@ http.createServer(function (request, response) {
     if (filePath === './')
         filePath = './index.html';
 
+    if (/\.\/p\/[A-Za-z]+\/[A-Za-z0-9]+/i.test(filePath)) {
+        filePath = './p.html'
+        //filePath = './p.staff.html' //for staff view.
+    }
+
     var extname = path.extname(filePath);
     var contentType = 'text/html';
     switch (extname) {
