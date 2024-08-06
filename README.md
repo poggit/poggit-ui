@@ -7,7 +7,9 @@ or in the very far future be the face of a new 'core' / 'internal' poggit.
 
 Using a simple no-modules required nodejs static server to server files.
 
-`node server.index.js port<default:80>`
+`node server/index.js port<default:80>`
+
+Example Usage:
 ```sh
 node server/index.js 80
 ```
