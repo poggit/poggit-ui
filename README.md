@@ -13,3 +13,13 @@ Example Usage:
 ```sh
 node server/index.js 80
 ```
+
+
+# Current View
+
+Every so often this site will get updated with the latest development from this repo to allow everyone to view and leave
+their opinions on the development:
+
+https://poggit.jaxkdev.net
+
+(**THIS IS A STATIC SITE, NOT A LIVE POGGIT SERVER**)
