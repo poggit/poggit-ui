@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
-let port = 80;
+let port = 8080;
 if (process.argv.length > 2) {
     port = process.argv[2];
 }
